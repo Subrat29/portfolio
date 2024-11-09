@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Moon, Sun, Github, Linkedin, Mail, Download, ExternalLink, Menu, X, Phone, Code } from 'lucide-react';
-
+import { FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';  // This is the new X logo
+// import { SiX } from 'react-icons/si';  // X logo from Simple Icons
 const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
@@ -115,7 +116,6 @@ const Portfolio = () => {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'} transition-colors duration-300`}>
-      {/* Rest of the component remains the same... */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200/50 dark:border-gray-700/50 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
@@ -141,13 +141,13 @@ const Portfolio = () => {
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 aria-label="Toggle dark mode"
               >
-                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
               </button>
               <a
                 href={personalInfo.resume}
                 className="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 transition-opacity duration-200"
               >
-                <Download size={16} />
+                <FaDownload size={16} />
                 Resume
               </a>
             </div>
@@ -158,14 +158,14 @@ const Portfolio = () => {
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 aria-label="Toggle dark mode"
               >
-                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
               </button>
               <button
                 onClick={toggleMenu}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
             </div>
           </div>
@@ -189,7 +189,7 @@ const Portfolio = () => {
                 href={personalInfo.resume}
                 className="flex items-center justify-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 transition-opacity duration-200 mt-4"
               >
-                <Download size={16} />
+                <FaDownload size={16} />
                 Resume
               </a>
             </div>
@@ -200,27 +200,27 @@ const Portfolio = () => {
       <main className="max-w-6xl mx-auto px-6">
         {/* Hero Section */}
         <section className="py-32 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5" />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5 z-0" />
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent relative z-10">
             {personalInfo.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed relative z-10">
             {personalInfo.about}
           </p>
-          <div className="flex justify-center gap-6 mt-12">
+          <div className="flex justify-center gap-6 mt-12 relative z-10">
             <a href={personalInfo.github} className="p-3 hover:text-blue-500 transition-colors duration-200">
-              <Github size={24} />
+              <FaGithub size={24} />
             </a>
             <a href={personalInfo.linkedin} className="p-3 hover:text-blue-500 transition-colors duration-200">
-              <Linkedin size={24} />
+              <FaLinkedin size={24} />
             </a>
             <a href={`mailto:${personalInfo.email}`} className="p-3 hover:text-blue-500 transition-colors duration-200">
-              <Mail size={24} />
+              <FaEnvelope size={24} />
             </a>
           </div>
         </section>
 
-        {/* Rest of the sections remain structurally the same, just using the updated data */}
+
         {/* Skills Section */}
         <section className="py-20" id="skills">
           <h2 className="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
@@ -276,18 +276,16 @@ const Portfolio = () => {
                 </div>
                 <div className="flex gap-6">
                   <a href={project.github} className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                    <Github size={18} /> Code
+                    <FaGithub size={18} /> Code
                   </a>
                   <a href={project.live} className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                    <ExternalLink size={18} /> Demo
+                    <FaExternalLinkAlt size={18} /> Demo
                   </a>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
-        {/* Previous code remains the same until Achievements section... */}
 
         {/* Achievements Section */}
         <section className="py-20" id="achievements">
@@ -337,7 +335,7 @@ const Portfolio = () => {
                 <p className="text-gray-600 dark:text-gray-400">{blog.description}</p>
                 <div className="flex items-center gap-2 text-blue-500 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <span>Read More</span>
-                  <ExternalLink size={16} />
+                  <FaExternalLinkAlt size={16} />
                 </div>
               </a>
             ))}
@@ -353,16 +351,16 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-8">
               <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-3 text-lg text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                <Mail size={24} /> {personalInfo.email}
+                <FaEnvelope size={24} /> {personalInfo.email}
               </a>
               <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-3 text-lg text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                <Phone size={24} /> {personalInfo.phone}
+                <FaPhone size={24} /> {personalInfo.phone}
               </a>
               <a href={personalInfo.linkedin} className="flex items-center gap-3 text-lg text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                <Linkedin size={24} /> LinkedIn
+                <FaLinkedin size={24} /> LinkedIn
               </a>
               <a href={personalInfo.github} className="flex items-center gap-3 text-lg text-blue-500 hover:text-blue-600 transition-colors duration-200">
-                <Github size={24} /> Github
+                <FaGithub size={24} /> Github
               </a>
             </div>
           </div>
@@ -378,13 +376,16 @@ const Portfolio = () => {
             </p>
             <div className="flex gap-6">
               <a href={personalInfo.github} className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Github size={20} />
+                <FaGithub size={20} />
               </a>
               <a href={personalInfo.linkedin} className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Linkedin size={20} />
+                <FaLinkedin size={20} />
+              </a>
+              <a href={personalInfo.linkedin} className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200">
+                <FaTwitter size={20} />
               </a>
               <a href={personalInfo.leetcode} className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                <Code size={20} />
+                <FaCode size={20} />
               </a>
             </div>
           </div>
