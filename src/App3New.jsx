@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope, FaDownload,
-  FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode, FaTwitter, FaTrophy
+  FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode, FaTwitter
 } from 'react-icons/fa';
 import { themeConfig } from './config/theme';
 import { portfolioContent } from './config/content';
@@ -16,15 +16,6 @@ const App = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const themeClasses = darkMode ? colors.dark : colors.light;
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false); // Close the mobile menu if open
-    }
-  };
-
 
   console.log('colors.brand.primary}/10:', `${colors.brand.primary}/10`);
   console.log('colors.brand.primary}/5:', colors.brand.primary / 5);
@@ -43,13 +34,13 @@ const App = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navigation.map((link) => (
-                <button
+                <a
                   key={link.title}
-                  onClick={() => scrollToSection(link.id)} // Pass section ID without '#'
+                  href={link.href}
                   className={`${themeClasses.secondaryText} ${colors.brand.accentHover} ${animation.transition.colors}`}
                 >
                   {link.title}
-                </button>
+                </a>
               ))}
             </div>
 
@@ -97,13 +88,14 @@ const App = () => {
           >
             <div className="flex flex-col gap-4 pb-6">
               {navigation.map((link) => (
-                <button
+                <a
                   key={link.title}
-                  onClick={() => scrollToSection(link.id)}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`${themeClasses.secondaryText} ${colors.brand.accentHover} ${animation.transition.colors} py-2`}
                 >
                   {link.title}
-                </button>
+                </a>
               ))}
               <a
                 href={personalInfo.resume}
@@ -181,7 +173,7 @@ const App = () => {
         {/* Projects Section */}
         <section className={layout.spacing.section} id="projects">
           <h2 className={`${typography.section.title} text-center`}>Projects</h2>
-          <div className="max-w-3xl mx-auto grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             {projects.map((project, index) => (
               <div key={index} className={`${components.card.base} ${themeClasses.border} ${components.card.hover} group`}>
                 <h3 className={`${typography.section.subtitle} mb-4 group-hover:${colors.brand.accent} ${animation.transition.colors}`}>
@@ -216,21 +208,14 @@ const App = () => {
               {achievements.map((achievement, index) => (
                 <div key={index} className={`${components.card.base} ${themeClasses.border} ${components.card.hover}`}>
                   <div className="flex items-center gap-4">
-                    {/* Added fixed width container for icon */}
-                    <div className="w-8 flex-shrink-0 flex items-center justify-center">
-                      <FaTrophy className={`${colors.brand.primary}`} size={24} />
-                    </div>
-                    {/* Text container with full width */}
-                    <div className="flex-1">
-                      <p className={typography.section.text}>{achievement}</p>
-                    </div>
+                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${colors.brand.primary}`}></div>
+                    <p className={typography.section.text}>{achievement}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
 
         {/* Education Section */}
         <section className={layout.spacing.section} id="education">
