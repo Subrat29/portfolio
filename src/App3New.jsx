@@ -132,8 +132,6 @@ const App = () => {
           </div>
         </section>
 
-
-
         {/* Skills Section */}
         <section className={layout.spacing.section} id="skills">
           <h2 className={`${typography.section.title} text-center`}>Technical Skills</h2>

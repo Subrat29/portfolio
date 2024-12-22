@@ -1,28 +1,55 @@
-import React, { useState } from 'react';
-import {
-  FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope, FaDownload,
-  FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode, FaTwitter, FaTrophy
-} from 'react-icons/fa';
-import { themeConfig } from '../config/theme';
-import { portfolioContent } from '../config/content';
+import React from 'react';
 
-
-export default function Experience() {
-  const { colors, typography, animation, layout, components } = themeConfig;
-  const { personalInfo, navigation, skills, experience, projects, achievements, education, blogs } = portfolioContent;
+const Experience = ({ experienceInfo }) => {
   return (
-    <section className={layout.spacing.section} id="experience">
-      <h2 className={`${typography.section.title} text-center`}>Experience</h2>
-      <div className="max-w-3xl mx-auto">
-        {experience.map((exp, index) => (
-          <div key={index} className={`mb-8 ${components.card.base} ${themeClasses.border} ${components.card.hover}`}>
-            <h3 className={typography.section.subtitle}>{exp.company}</h3>
-            <p className={`text-xl ${colors.brand.accent}`}>{exp.position}</p>
-            <p className={`${themeClasses.secondaryText} mt-2`}>{exp.period}</p>
-            <p className={`mt-4 ${themeClasses.secondaryText} whitespace-pre-line`}>{exp.description}</p>
+    <section 
+      id="experience" 
+      className="py-20 max-w-3xl mx-auto px-4"
+    >
+      {/* Section Title */}
+      <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 dark:text-white">
+        Experience
+      </h2>
+
+      {/* Experience Timeline */}
+      <div className="space-y-12">
+        {experienceInfo.map((exp, index) => (
+          <div
+            key={index}
+            className="relative transition-all duration-300 hover:translate-x-2"
+          >
+            {/* Timeline Connector */}
+            {index !== experienceInfo.length - 1 && (
+              <div className="absolute left-0 top-8 bottom-0 w-px border-r border-gray-200 dark:border-gray-700" />
+            )}
+
+            {/* Experience Card */}
+            <div className="pl-8">
+              {/* Company Name */}
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-200">
+                {exp.company}
+              </h3>
+
+              {/* Position */}
+              <p className="text-lg font-medium mt-1 text-blue-600 dark:text-blue-400 transition-colors duration-200">
+                {exp.position}
+              </p>
+
+              {/* Period */}
+              <p className="text-sm mt-1 text-gray-600 dark:text-gray-400 transition-colors duration-200">
+                {exp.period}
+              </p>
+
+              {/* Description */}
+              <p className="mt-4 leading-relaxed whitespace-pre-line text-gray-600 dark:text-gray-400 transition-colors duration-200">
+                {exp.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Experience;

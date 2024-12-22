@@ -12,7 +12,7 @@ export const portfolioContent = {
             leetcode: "https://leetcode.com/subratyadav",
             portfolio: "/portfolio"
         }
-    },
+    }, 
 
     navigation: [
         { title: 'Skills', id: 'skills' },

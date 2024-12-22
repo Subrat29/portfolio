@@ -1,36 +1,101 @@
-import React, { useState } from 'react';
-import {
-  FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope, FaDownload,
-  FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode, FaTwitter, FaTrophy
-} from 'react-icons/fa';
+import React from 'react';
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { themeConfig } from '../config/theme';
-import { portfolioContent } from '../config/content';
 
+const Contact = ({ personalInfo, themeClasses }) => {
+  const { layout, typography, colors, animation } = themeConfig;
 
-export default function Contact() {
-  const { colors, typography, animation, layout, components } = themeConfig;
-  const { personalInfo, navigation, skills, experience, projects, achievements, education, blogs } = portfolioContent;
   return (
-    <section className={layout.spacing.section} id="contact">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className={`${typography.section.title} mb-8`}>Let's Connect</h2>
-        <p className={`${typography.hero.subtitle} ${themeClasses.secondaryText} mb-12`}>
-          Feel free to reach out for opportunities or collaboration.
-        </p>
-        <div className="flex flex-wrap justify-center gap-8">
-          <a href={`mailto:${personalInfo.email}`} className={`flex items-center gap-3 text-lg ${colors.brand.accent} ${colors.brand.accentHover} ${animation.transition.colors}`}>
-            <FaEnvelope size={24} /> {personalInfo.email}
-          </a>
-          <a href={`tel:${personalInfo.phone}`} className={`flex items-center gap-3 text-lg ${colors.brand.accent} ${colors.brand.accentHover} ${animation.transition.colors}`}>
-            <FaPhone size={24} /> {personalInfo.phone}
-          </a>
-          <a href={personalInfo.social.linkedin} className={`flex items-center gap-3 text-lg ${colors.brand.accent} ${colors.brand.accentHover} ${animation.transition.colors}`}>
-            <FaLinkedin size={24} /> LinkedIn
-          </a>
-          <a href={personalInfo.social.github} className={`flex items-center gap-3 text-lg ${colors.brand.accent} ${colors.brand.accentHover} ${animation.transition.colors}`}>
-            <FaGithub size={24} /> Github
-          </a>
-        </div>
+    <section 
+      id="contact" 
+      className={`
+        ${layout.spacing.section}
+        flex flex-col items-center px-4
+      `}
+    >
+      {/* Section Title */}
+      <h2 
+        className={`
+          ${typography.section.title}
+          text-center mb-8
+          ${animation.transition.colors}
+        `}
+      >
+        Let's Connect
+      </h2>
+
+      {/* Subtitle */}
+      <p 
+        className={`
+          ${typography.section.text}
+          text-center mb-12
+          ${themeClasses.secondaryText}
+          ${animation.transition.colors}
+        `}
+      >
+        Feel free to reach out for opportunities or collaboration.
+      </p>
+
+      {/* Contact Options */}
+      <div className="flex flex-wrap justify-center gap-8">
+        {/* Email */}
+        <a 
+          href={`mailto:${personalInfo.email}`} 
+          className={`
+            flex items-center gap-3 text-sm font-medium
+            ${colors.brand.accent} 
+            ${colors.brand.accentHover} 
+            ${animation.transition.all}
+          `}
+        >
+          <FaEnvelope size={20} /> {personalInfo.email}
+        </a>
+
+        {/* Phone */}
+        <a 
+          href={`tel:${personalInfo.phone}`} 
+          className={`
+            flex items-center gap-3 text-sm font-medium
+            ${colors.brand.accent} 
+            ${colors.brand.accentHover} 
+            ${animation.transition.all}
+          `}
+        >
+          <FaPhone size={20} /> {personalInfo.phone}
+        </a>
+
+        {/* LinkedIn */}
+        <a 
+          href={personalInfo.social.linkedin} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={`
+            flex items-center gap-3 text-sm font-medium
+            ${colors.brand.accent} 
+            ${colors.brand.accentHover} 
+            ${animation.transition.all}
+          `}
+        >
+          <FaLinkedin size={20} /> LinkedIn
+        </a>
+
+        {/* GitHub */}
+        <a 
+          href={personalInfo.social.github} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={`
+            flex items-center gap-3 text-sm font-medium
+            ${colors.brand.accent} 
+            ${colors.brand.accentHover} 
+            ${animation.transition.all}
+          `}
+        >
+          <FaGithub size={20} /> GitHub
+        </a>
       </div>
-    </section>)
-}
+    </section>
+  );
+};
+
+export default Contact;

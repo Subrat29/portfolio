@@ -1,5 +1,3 @@
-// config/theme.js
-
 export const themeConfig = {
     // Color schemes
     colors: {
@@ -22,12 +20,16 @@ export const themeConfig = {
         skillBadge: 'bg-gray-800',
       },
       brand: {
+        text: 'text-gray-900 dark:text-gray-100',
         primary: 'from-blue-500 to-purple-500',
-        secondary: 'from-indigo-500 to-pink-500',
-        accent: 'text-blue-500',
+        secondary: 'text-gray-600 dark:text-gray-400',
+        accent: 'text-blue-600 dark:text-blue-400',
         accentHover: 'hover:text-blue-600',
         button: 'from-blue-500 to-purple-500',
         buttonHover: 'hover:opacity-90',
+        tag: 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200',
+        tagHover: 'hover:bg-gray-200 dark:hover:bg-gray-700',
+        border: 'border-gray-200 dark:border-gray-700'
       }
     },
   

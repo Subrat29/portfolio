@@ -1,27 +1,83 @@
-import React, { useState } from 'react';
-import {
-  FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope, FaDownload,
-  FaExternalLinkAlt, FaBars, FaTimes, FaPhone, FaCode, FaTwitter, FaTrophy
-} from 'react-icons/fa';
+import React from 'react';
 import { themeConfig } from '../config/theme';
 import { portfolioContent } from '../config/content';
 
+const Education = ({ themeClasses }) => {
+  const { education } = portfolioContent;
+  const { colors, components, layout, typography, animation } = themeConfig;
 
-export default function Education() {
-  const { colors, typography, animation, layout, components } = themeConfig;
-  const { personalInfo, navigation, skills, experience, projects, achievements, education, blogs } = portfolioContent;
   return (
-    <section className={layout.spacing.section} id="education">
-      <h2 className={`${typography.section.title} text-center`}>Education</h2>
-      <div className="max-w-3xl mx-auto">
+    <section 
+      id="education" 
+      className={`
+        ${layout.spacing.section} 
+        flex flex-col items-center px-4
+      `}
+    >
+      {/* Section Title */}
+      <h2 
+        className={`
+          ${typography.section.title} 
+          text-center mb-12
+          ${animation.transition.colors}
+        `}
+      >
+        Education
+      </h2>
+
+      {/* Education Cards */}
+      <div className="max-w-4xl w-full space-y-8">
         {education.map((edu, index) => (
-          <div key={index} className={`mb-8 ${components.card.base} ${themeClasses.border} ${components.card.hover}`}>
-            <h3 className={typography.section.subtitle}>{edu.school}</h3>
-            <p className={`text-xl ${themeClasses.secondaryText}`}>{edu.degree}</p>
-            <p className={`${colors.brand.accent} font-medium mt-2`}>{edu.year}</p>
-            <p className={`mt-4 ${themeClasses.secondaryText}`}>{edu.description}</p>
+          <div 
+            key={index} 
+            className={`
+              ${components.card.base} 
+              ${themeClasses.border} 
+              ${components.card.hover} 
+              p-6
+              group
+            `}
+          >
+            <h3 
+              className={`
+                ${typography.section.subtitle} 
+                ${animation.transition.colors}
+              `}
+            >
+              {edu.school}
+            </h3>
+            <p 
+              className={`
+                text-lg font-medium 
+                ${themeClasses.secondaryText} 
+                mt-2
+              `}
+            >
+              {edu.degree}
+            </p>
+            <p 
+              className={`
+                text-sm font-semibold 
+                ${colors.brand.accent} 
+                mt-2
+              `}
+            >
+              {edu.year}
+            </p>
+            <p 
+              className={`
+                ${typography.section.text} 
+                mt-4 
+                ${themeClasses.secondaryText}
+              `}
+            >
+              {edu.description}
+            </p>
           </div>
         ))}
       </div>
-    </section>)
-}
+    </section>
+  );
+};
+
+export default Education;
