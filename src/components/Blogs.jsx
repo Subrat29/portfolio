@@ -1,28 +1,17 @@
 import React from 'react';
-import { themeConfig } from '../config/theme';
 import { portfolioContent } from '../config/content';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-const Blogs = ({ themeClasses }) => {
+const Blogs = () => {
   const { blogs } = portfolioContent;
-  const { colors, components, layout, typography, animation } = themeConfig;
 
   return (
     <section 
       id="blogs" 
-      className={`
-        ${layout.spacing.section} 
-        flex flex-col items-center px-4
-      `}
+      className="py-20 flex flex-col items-center px-4"
     >
       {/* Section Title */}
-      <h2 
-        className={`
-          ${typography.section.title} 
-          text-center mb-12
-          ${animation.transition.colors}
-        `}
-      >
+      <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-200">
         Blogs
       </h2>
 
@@ -31,33 +20,15 @@ const Blogs = ({ themeClasses }) => {
         {blogs.map((blog, index) => (
           <div 
             key={index} 
-            className={`
-              ${components.card.base} 
-              ${themeClasses.border} 
-              ${components.card.hover} 
-              p-6
-              group
-            `}
+            className="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:shadow-lg dark:hover:shadow-blue-500/10 transition-all duration-200 group"
           >
             {/* Blog Title */}
-            <h3 
-              className={`
-                ${typography.section.subtitle} 
-                group-hover:${colors.brand.accent} 
-                ${animation.transition.colors}
-              `}
-            >
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
               {blog.title}
             </h3>
 
             {/* Blog Description */}
-            <p 
-              className={`
-                ${typography.section.text} 
-                mt-4 mb-6 
-                ${themeClasses.secondaryText}
-              `}
-            >
+            <p className="text-lg mt-4 mb-6 text-gray-600 dark:text-gray-400">
               {blog.description}
             </p>
 
@@ -67,13 +38,7 @@ const Blogs = ({ themeClasses }) => {
                 href={blog.live} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`
-                  flex items-center gap-2 
-                  text-sm font-medium
-                  ${colors.brand.accent} 
-                  ${colors.brand.accentHover} 
-                  ${animation.transition.all}
-                `}
+                className="flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200 hover:-translate-y-1"
               >
                 <FaExternalLinkAlt size={16} /> Read More
               </a>

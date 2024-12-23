@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { themeConfig } from './config/theme';
 import { portfolioContent } from './config/content';
 import {
   Navbar,
@@ -16,25 +15,26 @@ import {
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const { colors, animation, layout } = themeConfig;
   const { personalInfo, skills, experience } = portfolioContent;
 
-  const themeClasses = darkMode ? colors.dark : colors.light;
-
   return (
-    <div className={`min-h-screen ${themeClasses.background} ${themeClasses.text} ${animation.transition.colors}`}>
+    <div className={`min-h-screen ${
+      darkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'
+    } transition-colors duration-200`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className={`${layout.maxWidth} mx-auto px-6`}>
+      
+      <main className="max-w-6xl mx-auto px-6">
         <Hero personalInfo={personalInfo} />
-        <Skills skillsInfo={skills} themeClasses={themeClasses} />
+        <Skills skillsInfo={skills} />
         <Experience experienceInfo={experience} />
-        <Projects themeClasses={themeClasses} />
-        <Achievements themeClasses={themeClasses} />
-        <Education themeClasses={themeClasses} />
-        <Blogs themeClasses={themeClasses} />
-        <Contact personalInfo={personalInfo} themeClasses={themeClasses} />
+        <Projects />
+        <Achievements />
+        <Education />
+        <Blogs />
+        <Contact personalInfo={personalInfo} />
       </main>
-      <Footer personalInfo={personalInfo} themeClasses={themeClasses} />
+      
+      <Footer personalInfo={personalInfo} />
     </div>
   );
 }

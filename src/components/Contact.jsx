@@ -1,38 +1,19 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { themeConfig } from '../config/theme';
 
-const Contact = ({ personalInfo, themeClasses }) => {
-  const { layout, typography, colors, animation } = themeConfig;
-
+const Contact = ({ personalInfo }) => {
   return (
     <section 
       id="contact" 
-      className={`
-        ${layout.spacing.section}
-        flex flex-col items-center px-4
-      `}
+      className="py-20 flex flex-col items-center px-4"
     >
       {/* Section Title */}
-      <h2 
-        className={`
-          ${typography.section.title}
-          text-center mb-8
-          ${animation.transition.colors}
-        `}
-      >
+      <h2 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white transition-colors duration-200">
         Let's Connect
       </h2>
 
       {/* Subtitle */}
-      <p 
-        className={`
-          ${typography.section.text}
-          text-center mb-12
-          ${themeClasses.secondaryText}
-          ${animation.transition.colors}
-        `}
-      >
+      <p className="text-lg text-center mb-12 text-gray-600 dark:text-gray-400 transition-colors duration-200">
         Feel free to reach out for opportunities or collaboration.
       </p>
 
@@ -41,12 +22,7 @@ const Contact = ({ personalInfo, themeClasses }) => {
         {/* Email */}
         <a 
           href={`mailto:${personalInfo.email}`} 
-          className={`
-            flex items-center gap-3 text-sm font-medium
-            ${colors.brand.accent} 
-            ${colors.brand.accentHover} 
-            ${animation.transition.all}
-          `}
+          className="flex items-center gap-3 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200"
         >
           <FaEnvelope size={20} /> {personalInfo.email}
         </a>
@@ -54,12 +30,7 @@ const Contact = ({ personalInfo, themeClasses }) => {
         {/* Phone */}
         <a 
           href={`tel:${personalInfo.phone}`} 
-          className={`
-            flex items-center gap-3 text-sm font-medium
-            ${colors.brand.accent} 
-            ${colors.brand.accentHover} 
-            ${animation.transition.all}
-          `}
+          className="flex items-center gap-3 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200"
         >
           <FaPhone size={20} /> {personalInfo.phone}
         </a>
@@ -69,12 +40,7 @@ const Contact = ({ personalInfo, themeClasses }) => {
           href={personalInfo.social.linkedin} 
           target="_blank" 
           rel="noopener noreferrer"
-          className={`
-            flex items-center gap-3 text-sm font-medium
-            ${colors.brand.accent} 
-            ${colors.brand.accentHover} 
-            ${animation.transition.all}
-          `}
+          className="flex items-center gap-3 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200"
         >
           <FaLinkedin size={20} /> LinkedIn
         </a>
@@ -84,12 +50,7 @@ const Contact = ({ personalInfo, themeClasses }) => {
           href={personalInfo.social.github} 
           target="_blank" 
           rel="noopener noreferrer"
-          className={`
-            flex items-center gap-3 text-sm font-medium
-            ${colors.brand.accent} 
-            ${colors.brand.accentHover} 
-            ${animation.transition.all}
-          `}
+          className="flex items-center gap-3 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200"
         >
           <FaGithub size={20} /> GitHub
         </a>

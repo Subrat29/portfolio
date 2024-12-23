@@ -1,5 +1,3 @@
-// config/content.js
-
 export const portfolioContent = {
     personalInfo: {
         name: "Your Name",
