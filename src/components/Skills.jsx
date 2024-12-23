@@ -4,11 +4,11 @@ const Skills = ({ skillsInfo }) => {
   return (
     <section
       id="skills"
-      className="py-20 max-w-6xl mx-auto px-4"
+      className="py-16 max-w-6xl mx-auto px-4"
     >
       {/* Section Title */}
       <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 dark:text-white transition-colors duration-200">
-        Skills
+        SKILLS
       </h2>
 
       {/* Skills Grid */}
@@ -28,7 +28,7 @@ const Skills = ({ skillsInfo }) => {
               {skillSet.items.map((skill, idx) => (
                 <span
                   key={idx}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-500 hover:text-white transition-colors duration-200"
+                  className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-500 hover:text-white transition-colors duration-200"
                 >
                   {skill}
                 </span>

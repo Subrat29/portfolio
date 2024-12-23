@@ -4,11 +4,11 @@ const Experience = ({ experienceInfo }) => {
   return (
     <section 
       id="experience" 
-      className="py-20 max-w-3xl mx-auto px-4"
+      className="py-16 px-4 max-w-6xl mx-auto"
     >
       {/* Section Title */}
       <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-        Experience
+        EXPERIENCE
       </h2>
 
       {/* Experience Timeline */}
@@ -36,7 +36,7 @@ const Experience = ({ experienceInfo }) => {
               </p>
 
               {/* Period */}
-              <p className="text-sm mt-1 text-gray-600 dark:text-gray-400 transition-colors duration-200">
+              <p className="text-sm mt-1 text-gray-600 italic dark:text-gray-400 transition-colors duration-200">
                 {exp.period}
               </p>
 

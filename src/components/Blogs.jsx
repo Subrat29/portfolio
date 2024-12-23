@@ -1,5 +1,5 @@
 import React from 'react';
-import { portfolioContent } from '../config/content';
+import { portfolioContent } from '../data/content';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Blogs = () => {
@@ -8,11 +8,11 @@ const Blogs = () => {
   return (
     <section 
       id="blogs" 
-      className="py-20 flex flex-col items-center px-4"
+      className="py-16 flex flex-col items-center px-4"
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-200">
-        Blogs
+        BLOGS
       </h2>
 
       {/* Blogs Grid */}

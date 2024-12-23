@@ -1,5 +1,5 @@
 import React from 'react';
-import { portfolioContent } from '../config/content';
+import { portfolioContent } from '../data/content';
 
 const Education = () => {
   const { education } = portfolioContent;
@@ -11,7 +11,7 @@ const Education = () => {
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-200">
-        Education
+        EDUCATION
       </h2>
 
       {/* Education Cards */}

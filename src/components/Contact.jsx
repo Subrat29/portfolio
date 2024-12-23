@@ -9,7 +9,7 @@ const Contact = ({ personalInfo }) => {
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white transition-colors duration-200">
-        Let's Connect
+        LET'S CONNECT
       </h2>
 
       {/* Subtitle */}
