@@ -1,52 +1,68 @@
 import React from 'react';
 
-const Experience = ({ experienceInfo }) => {
+const Experience = ({ experience }) => {
   return (
-    <section 
-      id="experience" 
-      className="py-16 px-4 max-w-6xl mx-auto"
-    >
+    <section id="experience" className="relative py-24 max-w-6xl mx-auto px-4">
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-        EXPERIENCE
-      </h2>
+      <div className="text-center mb-20">
+        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          Professional Experience
+        </h2>
+      </div>
 
       {/* Experience Timeline */}
-      <div className="space-y-12">
-        {experienceInfo.map((exp, index) => (
+      <div className="relative space-y-12">
+        {experience.map((exp, index) => (
           <div
             key={index}
-            className="relative transition-all duration-300 hover:translate-x-2"
+            className="group relative"
           >
             {/* Timeline Connector */}
-            {index !== experienceInfo.length - 1 && (
-              <div className="absolute left-0 top-8 bottom-0 w-px border-r border-gray-200 dark:border-gray-700" />
+            {index !== experience.length - 1 && (
+              <div className="absolute left-0 top-8 -bottom-12 w-px bg-gradient-to-b from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20" />
             )}
 
             {/* Experience Card */}
-            <div className="pl-8">
-              {/* Company Name */}
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-200">
-                {exp.company}
-              </h3>
+            <div className="pl-8 transition-all duration-300 group-hover:translate-x-2">
+              {/* Company and Timeline */}
+              <div className="flex items-center space-x-3 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  {exp.company}
+                </h3>
+                <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
+                <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                  {exp.period}
+                </span>
+              </div>
 
               {/* Position */}
-              <p className="text-lg font-medium mt-1 text-blue-600 dark:text-blue-400 transition-colors duration-200">
-                {exp.position}
-              </p>
-
-              {/* Period */}
-              <p className="text-sm mt-1 text-gray-600 italic dark:text-gray-400 transition-colors duration-200">
-                {exp.period}
-              </p>
+              <div className="mb-4">
+                <span className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-blue-600 dark:text-blue-400 border border-gray-200 dark:border-gray-700/50 group-hover:border-blue-500">
+                  {exp.position}
+                </span>
+              </div>
 
               {/* Description */}
-              <p className="mt-4 leading-relaxed whitespace-pre-line text-gray-600 dark:text-gray-400 transition-colors duration-200">
-                {exp.description}
-              </p>
+              <div className="relative">
+                <p className="leading-relaxed text-gray-600 dark:text-gray-400 transition-colors duration-200">
+                  {exp.description}
+                </p>
+                
+                {/* Hover effect line */}
+                <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"></div>
+              </div>
             </div>
+
+            {/* Timeline Dot */}
+            <div className="absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 group-hover:scale-150 transition-transform duration-300" />
           </div>
         ))}
+      </div>
+
+      {/* Decorative background elements */}
+      <div className="absolute -z-10 w-full h-full top-0 left-0 opacity-30">
+        <div className="absolute top-20 left-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute top-20 right-0 w-72 h-72 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
       </div>
     </section>
   );

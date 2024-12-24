@@ -1,20 +1,32 @@
 export const portfolioContent = {
     personalInfo: {
         name: "Subrat Yadav",
-        title: "Full Stack Developer",
-        about: "Passionate full stack developer with expertise in building modern web applications. Currently based in Agra, India and seeking new opportunities to create innovative solutions.",
+        title: "Full Stack Developer | Innovator",
         email: "subratyadav29@gmail.com",
         phone: "+91 7820043752",
         location: "Agra, India",
+        image: "/src/assets/su.jpg",
+        resume: "/src/assets/SubratYadav_CV.pdf",
         social: {
             github: "https://github.com/subrat29",
             linkedin: "https://linkedin.com/in/subratyadav",
             leetcode: "https://leetcode.com/subratyadav",
             portfolio: "/portfolio"
+        },
+    },
+    about: {
+        title: "Full Stack Developer | Innovator | Problem Solver",
+        description: "I am a passionate full stack developer from Agra, India, with a track record of delivering innovative, real-world solutions through high-performance web applications.",
+        offer: {
+            "Frontend Excellence": "Crafting fast, responsive, and user-friendly interfaces.",
+            "Backend Optimization": "Building secure, scalable, and efficient server-side solutions.",
+            "UI/UX Design": "Designing intuitive, visually appealing, and functional user experiences.",
+            "Open-Source Contributions": "Actively collaborating in open-source communities to drive impactful projects.",
+            "Idea-to-Execution Expertise": "Leading and managing teams to transform ideas into practical solutions, validated by 3+ successful hackathon participations."
         }
-    }, 
-
+    },
     navigation: [
+        { title: 'About', id: 'about' },
         { title: 'Skills', id: 'skills' },
         { title: 'Experience', id: 'experience' },
         { title: 'Projects', id: 'projects' },
@@ -79,56 +91,74 @@ export const portfolioContent = {
 
     projects: [
         {
-            title: "StartSphere",
-            description: "A multi-feature web app for startups with ML-based friend suggestions, real-time chat, and sections for posts, networking, resource library, user profiles, and event management",
-            tech: ["React.js", "Flowbite", "Tailwind CSS", "Node.js", "Socket.io", "NLP", "ML"],
-            highlights: [
-                "Improved networking by 50% through comprehensive feature set",
-                "Seamless user experience for 1,000+ users",
-                "Reduced latency by 20% with Socket.io implementation",
-                "Increased investor interactions by 50%"
-            ],
-            github: "https://github.com/user/startsphere",
-            live: "https://startsphere-demo.com"
+            "title": "Task Manager App",
+            "description": "A web application to manage daily tasks effectively.",
+            "overview": "This app helps users organize their tasks by categories, set priorities, and track progress. The project faced challenges like ensuring real-time updates and creating a user-friendly interface. Solutions included implementing WebSocket for real-time communication and using Material-UI for consistent design.",
+            "image": "/src/assets/project1.png",
+            "tech": ["React", "Express", "PostgreSQL"],
+            "github": "https://github.com/username/task-manager",
+            "live": "https://taskmanager-app.com"
         },
         {
-            title: "TechTrendz",
-            description: "A secure, responsive blog platform with advanced editing capabilities",
-            tech: ["React.js", "TailwindCSS", "Shadcn", "Redux", "React Hook Form", "TinyMCE", "HTML React Parser", "Appwrite"],
-            highlights: [
-                "40% rise in user engagement",
-                "30% reduction in code redundancy",
-                "80% improvement in load times"
-            ],
-            github: "https://github.com/user/techtrendz",
-            live: "https://techtrendz-demo.com"
+            "title": "E-commerce Platform",
+            "description": "A scalable e-commerce platform for small businesses.",
+            "overview": "This project offers features like product catalog management, shopping cart, and secure payments. Challenges included handling high traffic and ensuring secure transactions. Solutions involved implementing load balancing and integrating Stripe for payment processing.",
+            "image": "/src/assets/a.png",
+            "tech": ["Next.js", "Node.js", "MongoDB"],
+            "github": "https://github.com/username/ecommerce-platform",
+            "live": "https://ecommerce-demo.com"
         },
         {
-            title: "MeriDukaan",
-            description: "A responsive e-commerce platform for local businesses",
-            tech: ["React.js", "React Router DOM", "Tailwind CSS", "Json Server"],
-            highlights: [
-                "Sub-500ms load times",
-                "40% investor engagement",
-                "20% increase in transaction efficiency",
-                "25% boost in user retention"
-            ],
-            github: "https://github.com/user/meridukaan",
-            live: "https://meridukaan-demo.com"
+            "title": "Portfolio Website",
+            "description": "A personal portfolio to showcase projects and skills.",
+            "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
+            "image": "/src/assets/b.png",
+            "tech": ["React", "Vite", "Firebase"],
+            "github": "https://github.com/username/portfolio-website",
+            "live": "https://portfolio-demo.com"
+        },
+        {
+            "title": "Whatsapp Website",
+            "description": "A personal portfolio to showcase projects and skills.",
+            "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
+            "image": "/src/assets/a.png",
+            "tech": ["Reactjs", "Vite", "Firebase"],
+            "github": "https://github.com/username2/portfolio-website",
+            "live": "https://portfolio-demo2.com"
         }
     ],
 
     achievements: [
-        "1st Place among 1,515 candidates in YourStory Digital Innovation Hackathon, leading team EndGame25",
-        "Finalist at Codex24 Hackathon, organized by Hackingly",
-        "Certificate of Recognition for outstanding contributions during Hacktoberfest 2023",
-        "Solved 400+ DSA challenges on LeetCode and GeeksforGeeks"
+        {
+            title: "First Prize in Hackathon",
+            description: "Won first prize in a national-level hackathon for developing a real-time collaboration tool for remote teams.",
+            images: ["/src/assets/project1.png", "/src/assets/a.png", "/src/assets/b.png"],
+            date: "2023"
+        },
+        {
+            title: "Employee of the Year",
+            description: "Awarded Employee of the Year for exceptional contributions to the development of the company's flagship product.",
+            images: ["/src/assets/employee-award.png", "/src/assets/team.png", "/src/assets/event.png"],
+            date: "2022"
+        },
+        {
+            title: "Top Contributor in Open Source",
+            description: "Recognized as a top contributor for actively maintaining and enhancing popular open-source libraries.",
+            images: ["/src/assets/open-source.png", "/src/assets/contributor.png", "/src/assets/community.png"],
+            date: "2021"
+        },
+        {
+            title: "Published Research Paper",
+            description: "Published a research paper on AI-driven optimization algorithms in a reputed international journal.",
+            images: ["/src/assets/research-paper.png", "/src/assets/presentation.png", "/src/assets/award.png"],
+            date: "2020"
+        }
     ],
 
     education: [
         {
             school: "Dr. Bhimrao Ambedkar University",
-            degree: "Bachelor of Engineering - Computer Science and Engineering",
+            degree: "Bachelor of Engineering - CSE",
             year: "December 2021 - May 2025",
             location: "Agra, India",
             description: "Relevant coursework: Data Structures and Algorithms, Database Management System, Operating Systems, Computer Networks, Software Engineering"

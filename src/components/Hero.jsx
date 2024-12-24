@@ -1,59 +1,77 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaCode,
+  FaGlobe,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
 
 const Hero = ({ personalInfo }) => {
   return (
-    <section className="py-20 flex flex-col items-center min-h-[calc(100vh-3.5rem)] justify-center px-4">
-      {/* Main Content Container */}
-      <div className="max-w-3xl mx-auto space-y-6">
-        {/* Greeting Text */}
-        <p className="text-sm text-blue-600 dark:text-blue-400 transition-colors duration-200">
-          Hi, I'm
-        </p>
+    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900" id="hero">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Image Section */}
+          <div className="order-1 md:order-1 flex justify-center">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full">
+              <LazyLoadImage
+                src={personalInfo.image}
+                alt={personalInfo.name}
+                effect="blur"
+                className="rounded-full object-cover w-full h-full shadow-xl"
+                wrapperClassName="w-full h-full"
+              />
+              {/* Decorative circle background */}
+              <div className="absolute -z-10 w-full h-full -top-4 -left-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 dark:opacity-30" />
+            </div>
+          </div>
 
-        {/* Title - Split into gradient and regular text */}
-        <h1 className="space-y-2">
-          <span className="block text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent transition-colors duration-200">
-            {personalInfo.title}
-          </span>
-        </h1>
+          {/* Content Section */}
+          <div className="order-2 md:order-2 text-left space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Hi, I'm{' '}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                  {personalInfo.name}
+                </span>
+              </h1>
 
-        {/* About Text */}
-        <p className="text-lg max-w-2xl leading-relaxed text-gray-800 dark:text-gray-200 transition-colors duration-200">
-          {personalInfo.about}
-        </p>
+              <p className="text-xl text-gray-600 dark:text-gray-300 font-medium">
+                {personalInfo.title}
+              </p>
 
-        {/* Social Links */}
-        <div className="flex gap-6 pt-8">
-          <a 
-            href={personalInfo.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:-translate-y-1"
-            aria-label="GitHub"
-          >
-            <FaGithub size={22} />
-          </a>
-          <a 
-            href={personalInfo.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:-translate-y-1"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin size={22} />
-          </a>
-          <a 
-            href={`mailto:${personalInfo.email}`}
-            className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:-translate-y-1"
-            aria-label="Email"
-          >
-            <FaEnvelope size={22} />
-          </a>
+              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                <FaMapMarkerAlt className="text-blue-500" />
+                <span>{personalInfo.location}</span>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <SocialLink href={personalInfo.social.github} icon={<FaGithub size={18} />} label="GitHub" />
+              <SocialLink href={personalInfo.social.linkedin} icon={<FaLinkedin size={18} />} label="LinkedIn" />
+              <SocialLink href={personalInfo.social.leetcode} icon={<FaCode size={18} />} label="LeetCode" />
+              <SocialLink href={personalInfo.social.portfolio} icon={<FaGlobe size={18} />} label="Portfolio" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+const SocialLink = ({ href, icon, label }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+    aria-label={label}
+  >
+    {icon}
+  </a>
+);
 
 export default Hero;

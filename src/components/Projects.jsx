@@ -3,65 +3,45 @@ import { FaGithub, FaExternalLinkAlt, FaChevronDown, FaChevronUp } from 'react-i
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   const [showAll, setShowAll] = useState(false);
-
-  const projects = [
-    {
-      "title": "Task Manager App",
-      "description": "A web application to manage daily tasks effectively.",
-      "overview": "This app helps users organize their tasks by categories, set priorities, and track progress. The project faced challenges like ensuring real-time updates and creating a user-friendly interface. Solutions included implementing WebSocket for real-time communication and using Material-UI for consistent design.",
-      "image": "/src/assets/project1.png",
-      "tech": ["React", "Express", "PostgreSQL"],
-      "github": "https://github.com/username/task-manager",
-      "live": "https://taskmanager-app.com"
-    },
-    {
-      "title": "E-commerce Platform",
-      "description": "A scalable e-commerce platform for small businesses.",
-      "overview": "This project offers features like product catalog management, shopping cart, and secure payments. Challenges included handling high traffic and ensuring secure transactions. Solutions involved implementing load balancing and integrating Stripe for payment processing.",
-      "image": "/src/assets/a.png",
-      "tech": ["Next.js", "Node.js", "MongoDB"],
-      "github": "https://github.com/username/ecommerce-platform",
-      "live": "https://ecommerce-demo.com"
-    },
-    {
-      "title": "Portfolio Website",
-      "description": "A personal portfolio to showcase projects and skills.",
-      "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
-      "image": "/src/assets/b.png",
-      "tech": ["React", "Vite", "Firebase"],
-      "github": "https://github.com/username/portfolio-website",
-      "live": "https://portfolio-demo.com"
-    }           
-  ];
-
-  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   const ProjectCard = ({ project }) => (
-    <div className="group">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+    <div className="group relative">
+      <div className="grid md:grid-cols-2 gap-8 items-center p-6 transition-all duration-300 hover:translate-x-2">
+        {/* Image Section */}
+        <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
           <LazyLoadImage
             src={project.image}
             alt={project.title}
             effect="blur"
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
+        {/* Content Section */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-            {project.title}
-          </h3>
+          {/* Title with header line */}
+          <div className="flex items-center space-x-3">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              {project.title}
+            </h3>
+            <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
+          </div>
 
           <p className="text-gray-600 dark:text-gray-400">
             {project.description}
           </p>
 
+          {/* Tech stack tags */}
           <div className="flex flex-wrap gap-2">
             {project.tech.map((tech, idx) => (
-              <span key={idx} className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+              <span 
+                key={idx} 
+                className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
+              >
                 {tech}
               </span>
             ))}
@@ -71,12 +51,13 @@ const Projects = () => {
             {project.overview}
           </p>
 
-          <div className="flex gap-4">
+          {/* Links */}
+          <div className="flex gap-6">
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaGithub size={20} />
               <span>Source Code</span>
@@ -85,45 +66,61 @@ const Projects = () => {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaExternalLinkAlt size={18} />
               <span>Live Demo</span>
             </a>
           </div>
         </div>
+
+        {/* Bottom gradient line that appears on hover - matching Skills and Experience components */}
+        <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"></div>
       </div>
     </div>
   );
 
   return (
-    <section className="py-16 px-4 max-w-6xl mx-auto" id="projects">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-        PROJECTS
-      </h2>
+    <section className="relative py-24 max-w-6xl mx-auto px-4" id="projects">
+      {/* Section Title */}
+      <div className="text-center mb-20">
+        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          Featured Projects
+        </h2>
+      </div>
 
+      {/* Projects Grid */}
       <div className="space-y-16">
         {visibleProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
 
-      {projects.length > 2 && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-12 mx-auto flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-        >
-          {showAll ? (
-            <>
-              Show Less <FaChevronUp />
-            </>
-          ) : (
-            <>
-              Show More Projects <FaChevronDown />
-            </>
-          )}
-        </button>
+      {/* Show More/Less Button */}
+      {projects.length > 3 && (
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
+          >
+            {showAll ? (
+              <>
+                Show Less <FaChevronUp className="group-hover:transform group-hover:-translate-y-1 transition-transform duration-300" />
+              </>
+            ) : (
+              <>
+                Show More Projects <FaChevronDown className="group-hover:transform group-hover:translate-y-1 transition-transform duration-300" />
+              </>
+            )}
+          </button>
+        </div>
       )}
+
+      {/* Decorative background elements */}
+      <div className="absolute -z-10 w-full h-full top-0 left-0 opacity-30">
+        <div className="absolute top-20 left-0 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute top-20 right-0 w-72 h-72 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+      </div>
     </section>
   );
 };
