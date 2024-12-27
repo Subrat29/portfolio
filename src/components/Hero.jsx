@@ -16,36 +16,51 @@ const Hero = ({ personalInfo }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="order-1 md:order-1 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full">
-              <LazyLoadImage
-                src={personalInfo.image}
-                alt={personalInfo.name}
-                effect="blur"
-                className="rounded-full object-cover w-full h-full shadow-xl"
-                wrapperClassName="w-full h-full"
-              />
-              {/* Decorative circle background */}
-              <div className="absolute -z-10 w-full h-full -top-4 -left-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 dark:opacity-30" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 group">
+              {/* Main image */}
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                <LazyLoadImage
+                  src={personalInfo.image}
+                  alt={personalInfo.name}
+                  effect="blur"
+                  className="rounded-full object-cover w-full h-full shadow-xl"
+                  wrapperClassName="w-full h-full"
+                />
+                {/* Gradient border on hover */}
+                <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-[3px] group-hover:border-blue-500/30 transition-all duration-300" />
+              </div>
+              
+              {/* Animated gradient circle */}
+              <div className="absolute -z-10 w-full h-full top-0 left-0 rounded-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 group-hover:from-blue-600/40 group-hover:to-purple-600/40 transition-all duration-300" />
             </div>
           </div>
 
           {/* Content Section */}
-          <div className="order-2 md:order-2 text-left space-y-6">
+          <div className="order-2 md:order-2 text-left space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Hi, I'm{' '}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                  {personalInfo.name}
+                <span className="relative inline-block group">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 transition-all duration-300">
+                    {personalInfo.name}
+                  </span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-300 font-medium">
-                {personalInfo.title}
+              <p className="text-xl text-gray-600 dark:text-gray-300 font-medium group">
+                <span className="relative inline-block">
+                  {personalInfo.title}
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                </span>
               </p>
 
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <FaMapMarkerAlt className="text-blue-500" />
-                <span>{personalInfo.location}</span>
+              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 group">
+                <FaMapMarkerAlt className="text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+                <span className="relative inline-block">
+                  {personalInfo.location}
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                </span>
               </div>
             </div>
 
@@ -67,10 +82,12 @@ const SocialLink = ({ href, icon, label }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+    className="group relative p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
     aria-label={label}
   >
-    {icon}
+    <span className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+      {icon}
+    </span>
   </a>
 );
 
