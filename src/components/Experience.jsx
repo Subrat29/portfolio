@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const Experience = ({ experience }) => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleExperience = showAll ? experience : experience.slice(0, 2);
+
   return (
     <section id="experience" className="relative py-24 max-w-6xl mx-auto px-4">
       {/* Section Title */}
@@ -12,13 +16,13 @@ const Experience = ({ experience }) => {
 
       {/* Experience Timeline */}
       <div className="relative space-y-12">
-        {experience.map((exp, index) => (
+        {visibleExperience.map((exp, index) => (
           <div
             key={index}
             className="group relative"
           >
-            {/* Timeline Connector */}
-            {index !== experience.length - 1 && (
+            {/* Timeline Connector - only show if not last visible item */}
+            {index !== visibleExperience.length - 1 && (
               <div className="absolute left-0 top-8 -bottom-12 w-px bg-gradient-to-b from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20" />
             )}
 
@@ -58,6 +62,26 @@ const Experience = ({ experience }) => {
           </div>
         ))}
       </div>
+
+      {/* Show More/Less Button */}
+      {experience.length > 2 && (
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
+          >
+            {showAll ? (
+              <>
+                Show Less <FaChevronUp className="group-hover:transform group-hover:-translate-y-1 transition-transform duration-300" />
+              </>
+            ) : (
+              <>
+                Show More Experience <FaChevronDown className="group-hover:transform group-hover:translate-y-1 transition-transform duration-300" />
+              </>
+            )}
+          </button>
+        </div>
+      )}
 
       {/* Decorative background elements */}
       <div className="absolute -z-10 w-full h-full top-0 left-0 opacity-30">

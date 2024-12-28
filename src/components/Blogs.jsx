@@ -1,9 +1,12 @@
-import React from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaExternalLinkAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Blogs = ({ blogs }) => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleBlogs = showAll ? blogs : blogs.slice(0, 2);
+
   return (
     <section className="relative py-24 max-w-6xl mx-auto px-4" id="blogs">
       {/* Section Title */}
@@ -15,7 +18,7 @@ const Blogs = ({ blogs }) => {
 
       {/* Blogs Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {blogs.map((blog, index) => (
+        {visibleBlogs.map((blog, index) => (
           <div key={index} className="group relative">
             <div className="h-full p-6 transition-all duration-300 hover:translate-x-2">
               {/* Blog Image */}
@@ -74,6 +77,26 @@ const Blogs = ({ blogs }) => {
           </div>
         ))}
       </div>
+
+      {/* Show More/Less Button */}
+      {blogs.length > 2 && (
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
+          >
+            {showAll ? (
+              <>
+                Show Less <FaChevronUp className="group-hover:transform group-hover:-translate-y-1 transition-transform duration-300" />
+              </>
+            ) : (
+              <>
+                Show More Blogs <FaChevronDown className="group-hover:transform group-hover:translate-y-1 transition-transform duration-300" />
+              </>
+            )}
+          </button>
+        </div>
+      )}
 
       {/* Decorative background elements */}
       <div className="absolute -z-10 w-full h-full top-0 left-0 opacity-30">

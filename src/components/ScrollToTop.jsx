@@ -23,8 +23,12 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 p-2 rounded-full bg-indigo-500 text-white shadow-md transition-opacity duration-300 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+      className={`fixed bottom-8 right-8 p-2 rounded-full bg-indigo-500 text-white shadow-md transition-opacity duration-300 ease-in-out ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+      style={{
+        zIndex: 9999, // Ensure the button is above other elements
+      }}
       aria-label="Scroll to top"
     >
       <FaChevronUp size={20} />

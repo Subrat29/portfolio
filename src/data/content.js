@@ -5,13 +5,15 @@ export const portfolioContent = {
         email: "subratyadav29@gmail.com",
         phone: "+91 7820043752",
         location: "Agra, India",
-        image: "/src/assets/su.jpg",
-        resume: "/src/assets/SubratYadav_CV.pdf",
+        image: "/su.jpg",
+        resume: "/SubratYadav_CV.pdf",
         social: {
             github: "https://github.com/subrat29",
             linkedin: "https://linkedin.com/in/subratyadav",
             leetcode: "https://leetcode.com/subratyadav",
-            portfolio: "/portfolio"
+            twitter: "https://x.com/findingsubrat",
+            discord: "https://discord.com/subratyadav",
+            blog: "https://tech-trendz-seven.vercel.app/",
         },
     },
     about: {
@@ -94,7 +96,7 @@ export const portfolioContent = {
             "title": "Task Manager App",
             "description": "A web application to manage daily tasks effectively.",
             "overview": "This app helps users organize their tasks by categories, set priorities, and track progress. The project faced challenges like ensuring real-time updates and creating a user-friendly interface. Solutions included implementing WebSocket for real-time communication and using Material-UI for consistent design.",
-            "image": "/src/assets/project1.png",
+            "image": "/project1.png",
             "tech": ["React", "Express", "PostgreSQL"],
             "github": "https://github.com/username/task-manager",
             "live": "https://taskmanager-app.com"
@@ -103,7 +105,7 @@ export const portfolioContent = {
             "title": "E-commerce Platform",
             "description": "A scalable e-commerce platform for small businesses.",
             "overview": "This project offers features like product catalog management, shopping cart, and secure payments. Challenges included handling high traffic and ensuring secure transactions. Solutions involved implementing load balancing and integrating Stripe for payment processing.",
-            "image": "/src/assets/a.png",
+            "image": "/a.png",
             "tech": ["Next.js", "Node.js", "MongoDB"],
             "github": "https://github.com/username/ecommerce-platform",
             "live": "https://ecommerce-demo.com"
@@ -112,7 +114,7 @@ export const portfolioContent = {
             "title": "Portfolio Website",
             "description": "A personal portfolio to showcase projects and skills.",
             "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
-            "image": "/src/assets/b.png",
+            "image": "/b.png",
             "tech": ["React", "Vite", "Firebase"],
             "github": "https://github.com/username/portfolio-website",
             "live": "https://portfolio-demo.com"
@@ -121,7 +123,7 @@ export const portfolioContent = {
             "title": "Whatsapp Website",
             "description": "A personal portfolio to showcase projects and skills.",
             "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
-            "image": "/src/assets/a.png",
+            "image": "/a.png",
             "tech": ["Reactjs", "Vite", "Firebase"],
             "github": "https://github.com/username2/portfolio-website",
             "live": "https://portfolio-demo2.com"
@@ -170,6 +172,16 @@ export const portfolioContent = {
             title: "Coming Soon",
             description: "Technical blogs and articles about web development and software engineering.",
             link: "#"
+        },
+        {
+            title: "Coming Soon",
+            description: "Technical blogs and articles about web development and software engineering.",
+            link: "#"
+        },
+        {
+            title: "Coming Soon",
+            description: "Technical blogs and articles about web development and software engineering.",
+            link: "#"
         }
-    ]
+    ] 
 };
