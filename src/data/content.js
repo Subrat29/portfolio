@@ -20,11 +20,9 @@ export const portfolioContent = {
         title: "Full Stack Developer | Innovator | Problem Solver",
         description: "I am a passionate full stack developer from Agra, India, with a track record of delivering innovative, real-world solutions through high-performance web applications.",
         offer: {
-            "Frontend Excellence": "Crafting fast, responsive, and user-friendly interfaces.",
-            "Backend Optimization": "Building secure, scalable, and efficient server-side solutions.",
-            "UI/UX Design": "Designing intuitive, visually appealing, and functional user experiences.",
-            "Open-Source Contributions": "Actively collaborating in open-source communities to drive impactful projects.",
-            "Idea-to-Execution Expertise": "Leading and managing teams to transform ideas into practical solutions, validated by 3+ successful hackathon participations."
+            "Full-Stack Development": "Building scalable, secure, and high-performance web applications with seamless integration of frontend and backend technologies.",
+            "UI/UX Design and Optimization": "Designing intuitive, visually appealing interfaces and delivering responsive, user-focused experiences that drive engagement.",
+            "Innovative Problem-Solving": "Transforming ideas into impactful solutions through teamwork, real-time application development, and open-source contributions, validated by success in competitive hackathons."
         }
     },
     navigation: [
@@ -62,98 +60,91 @@ export const portfolioContent = {
             company: "Freelancer",
             position: "Full Stack Developer",
             period: "May 2024 - Aug 2024",
-            description: [
-                "Architected a full-featured school app using React.js, Node.js, and MongoDB, streamlining student management, attendance tracking, and grading for 500+ students",
-                "Optimized UI/UX with Tailwind CSS and Shadcn, driving a 30% increase in user engagement",
-                "Established real-time updates using WebSockets, boosting interaction by 25%",
-                "Implemented secure user authentication and authorization with role-based access control, reducing unauthorized access attempts by 40%"
-            ]
+            description: "As a Full Stack Developer, I designed and developed a comprehensive school management application leveraging React.js, Node.js, and MongoDB to streamline student operations for over 500 students. I enhanced the user experience with Tailwind CSS and Shadcn, resulting in a 30% increase in engagement. Additionally, I implemented real-time updates using WebSockets to improve user interaction by 25% and ensured secure access by integrating role-based authentication, reducing unauthorized access by 40%."
         },
         {
             company: "Hacktoberfest 2023",
             position: "Open-Source Contributor",
             period: "October 2023",
-            description: [
-                "Engineered multiple components across open-source projects, enhancing code quality",
-                "Resolved numerous bugs and improved project functionality",
-                "Achieved cross-browser compatibility, improving user satisfaction"
-            ]
+            description: "During Hacktoberfest 2023, I actively contributed to open-source projects by engineering innovative components that enhanced code quality and usability. I resolved over 20 critical bugs, significantly improving project stability and functionality. By achieving cross-browser compatibility, I delivered a seamless and consistent user experience, boosting satisfaction for a diverse user base."
         },
         {
             company: "GirlScript Summer of Code 2023",
             position: "Open-Source Contributor",
             period: "May 2023 - July 2023",
-            description: [
-                "Contributed to multiple open-source projects, developing new features and components",
-                "Accelerated project performance through code refactoring and optimized workflows",
-                "Improved user interface consistency across different platforms"
-            ]
+            description: "At GirlScript Summer of Code 2023, I played a key role in developing impactful features and components for various open-source projects. My contributions included optimizing workflows and refactoring code to enhance performance and scalability. Additionally, I focused on improving interface consistency across platforms, delivering a polished and user-friendly experience."
         }
     ],
 
     projects: [
         {
-            "title": "Task Manager App",
-            "description": "A web application to manage daily tasks effectively.",
-            "overview": "This app helps users organize their tasks by categories, set priorities, and track progress. The project faced challenges like ensuring real-time updates and creating a user-friendly interface. Solutions included implementing WebSocket for real-time communication and using Material-UI for consistent design.",
-            "image": "/project1.png",
-            "tech": ["React", "Express", "PostgreSQL"],
-            "github": "https://github.com/username/task-manager",
-            "live": "https://taskmanager-app.com"
+            "title": "StartSphere",
+            "description": "A multi-feature solution for emerging entrepreneurs.",
+            "overview": "StartSphere is a platform designed to support startups with features like ML-driven friend suggestions, real-time chat, and sections for posts, networking, and event management. The project improved networking opportunities by 50%, and challenges like real-time communication and scalability were addressed using Socket.io and a modular architecture.",
+            "image": "project/startsphere.png",
+            "tech": ["React.js", "Flowbite", "Tailwind CSS", "Node.js", "Socket.io", "NLP", "Machine Learning"],
+            "github": "https://github.com/Subrat29/StartSphere-Your-Startup-Ecosystem-Integrator",
+            "live": "https://startup-topaz.vercel.app/",
+            "slide":"https://docs.google.com/presentation/d/124-wJ0WYIgkYXU4x7LfGitqw9PGSPsGR/edit?usp=sharing&ouid=101022416265119991772&rtpof=true&sd=true"
         },
         {
-            "title": "E-commerce Platform",
-            "description": "A scalable e-commerce platform for small businesses.",
-            "overview": "This project offers features like product catalog management, shopping cart, and secure payments. Challenges included handling high traffic and ensuring secure transactions. Solutions involved implementing load balancing and integrating Stripe for payment processing.",
-            "image": "/a.png",
-            "tech": ["Next.js", "Node.js", "MongoDB"],
-            "github": "https://github.com/username/ecommerce-platform",
-            "live": "https://ecommerce-demo.com"
+            "title": "Faculty Excellence Tracker",
+            "description": "A system for automating career advancement for higher education faculty.",
+            "overview": "This project automates faculty appraisals using predefined scoring formulas, ORCID-based profile imports, and real-time dashboards. It integrates with LMS and HR systems to streamline data synchronization and boosts engagement through incentive-based gamification features like badges and leaderboards.",
+            "image": "project/fet.png",
+            "tech": ["React.js", "Node.js", "D3.js"],
+            "github": "https://github.com/Subrat29/FacultyExcellenceTracker",
+            "live": "https://faculty-excellence-tracker.vercel.app/",
+            "slide": "https://docs.google.com/presentation/d/1A_NDCD5XQUA9tzaCHK93rHoVGJsADomA/edit?usp=sharing&ouid=101022416265119991772&rtpof=true&sd=true"
         },
         {
-            "title": "Portfolio Website",
-            "description": "A personal portfolio to showcase projects and skills.",
-            "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
-            "image": "/b.png",
-            "tech": ["React", "Vite", "Firebase"],
-            "github": "https://github.com/username/portfolio-website",
-            "live": "https://portfolio-demo.com"
-        },
-        {
-            "title": "Whatsapp Website",
-            "description": "A personal portfolio to showcase projects and skills.",
-            "overview": "The portfolio was designed to highlight personal achievements, with features like a contact form and blog integration. Challenges included optimizing performance and making the design responsive. Tailwind CSS and Lighthouse audits were used to achieve these goals.",
-            "image": "/a.png",
-            "tech": ["Reactjs", "Vite", "Firebase"],
-            "github": "https://github.com/username2/portfolio-website",
-            "live": "https://portfolio-demo2.com"
+            "title": "TechTrendz",
+            "description": "A modern platform for tech blogging.",
+            "overview": "TechTrendz allows users to create and manage blogs with features like real-time editing, secure access, and seamless form handling. The platform's load time was reduced by 80% using optimized parsing techniques, enhancing the user experience significantly.",
+            "image": "project/techtrendz.png",
+            "tech": ["React.js", "Tailwind CSS", "Shadcn", "Redux", "React Hook Form", "TinyMCE", "Appwrite"],
+            "github": "https://github.com/Subrat29/TechTrendz",
+            "live": "https://tech-trendz-seven.vercel.app/",
+            // "slide":""
         }
     ],
 
     achievements: [
         {
-            title: "First Prize in Hackathon",
-            description: "Won first prize in a national-level hackathon for developing a real-time collaboration tool for remote teams.",
-            images: ["/src/assets/project1.png", "/src/assets/a.png", "/src/assets/b.png"],
-            date: "2023"
+            "title": "Winner @YourStory Digital Innovation Hackathon",
+            "description": "Led team EndGame25 to secure 1st Place among 1,515 candidates by building a MERN & ML-based startup ecosystem solution.",
+            "images": ["/src/assets/hackathon1.png", "/src/assets/teamwork.png", "/src/assets/award.png"],
+            "date": "2024"
         },
         {
-            title: "Employee of the Year",
-            description: "Awarded Employee of the Year for exceptional contributions to the development of the company's flagship product.",
-            images: ["/src/assets/employee-award.png", "/src/assets/team.png", "/src/assets/event.png"],
-            date: "2022"
+            "title": "Runner-Up @Smart India Hackathon 2024",
+            "description": "Navigated the team to emerge as top 6 finalists and secure the runner-up position among 150 teams by addressing a designated problem statement.",
+            "images": ["/src/assets/sih2024.png", "/src/assets/team.png", "/src/assets/presentation.png"],
+            "date": "2024"
         },
         {
-            title: "Top Contributor in Open Source",
-            description: "Recognized as a top contributor for actively maintaining and enhancing popular open-source libraries.",
-            images: ["/src/assets/open-source.png", "/src/assets/contributor.png", "/src/assets/community.png"],
-            date: "2021"
+            "title": "Finalist @Codex24 Hackathon",
+            "description": "Recognized as a finalist.",
+            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "date": "2023"
         },
         {
-            title: "Published Research Paper",
-            description: "Published a research paper on AI-driven optimization algorithms in a reputed international journal.",
-            images: ["/src/assets/research-paper.png", "/src/assets/presentation.png", "/src/assets/award.png"],
-            date: "2020"
+            "title": "Finalist @Level SuperMind Hackathon'25",
+            "description": "Recognized as a finalist .",
+            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "date": "2023"
+        },
+        {
+            "title": "Recognition for outstanding contributions @Hacktoberfest'23",
+            "description": "Awarded a Certificate of Recognition for outstanding contributions to the hackathon during Hacktoberfest'23",
+            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "date": "2023"
+        },
+        {
+            "title": "Solved 400+ DSA Challenges",
+            "description": "Excelled in solving 400+ data structure and algorithm challenges on platforms like LeetCode and GeeksforGeeks, specializing in programming, graphs, and data manipulation.",
+            "images": ["/src/assets/dsa.png", "/src/assets/leetcode.png", "/src/assets/graphs.png"],
+            "date": "2023"
         }
     ],
 
@@ -183,5 +174,5 @@ export const portfolioContent = {
             description: "Technical blogs and articles about web development and software engineering.",
             link: "#"
         }
-    ] 
+    ]
 };

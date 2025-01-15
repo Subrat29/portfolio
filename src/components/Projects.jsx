@@ -60,7 +60,7 @@ const Projects = ({ projects }) => {
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaGithub size={20} />
-              <span>Source Code</span>
+              <span className='text-xs'>Source Code</span>
             </a>
             <a
               href={project.live}
@@ -69,7 +69,16 @@ const Projects = ({ projects }) => {
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaExternalLinkAlt size={18} />
-              <span>Live Demo</span>
+              <span className='text-xs'>Live Demo</span>
+            </a>
+            <a
+              href={project.slide}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
+            >
+              <FaExternalLinkAlt size={18} />
+              <span className='text-xs'>Overview</span>
             </a>
           </div>
         </div>

@@ -95,15 +95,7 @@ const Footer = ({ personalInfo }) => {
           {/* Copyright Text with Heart Animation */}
           <div className="text-center space-y-2">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} {personalInfo.name}
-            </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center gap-1.5">
-              Crafted with
-              <span className="inline-block group">
-                <FaHeart className="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform duration-300" />
-                <span className="sr-only">love</span>
-              </span>
-              for you
+              © {new Date().getFullYear()} {personalInfo.name} <FaHeart className="inline text-red-500 animate-pulse" />
             </p>
           </div>
         </div>
