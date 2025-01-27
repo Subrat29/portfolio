@@ -12,7 +12,7 @@ const About = ({ about }) => {
               About Me
             </h2>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-center">
+          <p className="md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-center">
             {about.description}
           </p>
           {/* Gradient line separator */}

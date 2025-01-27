@@ -71,17 +71,17 @@ const Achievements = ({ achievements }) => {
               <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full">
                 <FaTrophy size={16} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              <h3 className="sm:text-lg font-bold text-gray-900 dark:text-white">
                 {achievement.title}
               </h3>
               <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
             </div>
 
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               {achievement.description}
             </p>
 
-            <div className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 w-fit">
+            <div className="px-3 py-1 rounded-full text-xs bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 w-fit">
               {achievement.date}
             </div>
           </div>
@@ -98,7 +98,7 @@ const Achievements = ({ achievements }) => {
       {/* Section Title */}
       <div className="text-center mb-20">
         <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-          Notable Achievements
+          Achievements
         </h2>
       </div>
 

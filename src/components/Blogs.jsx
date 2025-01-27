@@ -35,7 +35,7 @@ const Blogs = ({ blogs }) => {
 
               {/* Header with gradient line */}
               <div className="flex items-center space-x-3 mb-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="sm:text-xl font-bold text-gray-900 dark:text-white">
                   {blog.title}
                 </h3>
                 <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
@@ -47,7 +47,7 @@ const Blogs = ({ blogs }) => {
                   {blog.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
+                      className="px-3 py-1 rounded-full text-xs bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
                     >
                       {tag}
                     </span>
@@ -56,7 +56,7 @@ const Blogs = ({ blogs }) => {
               )}
 
               {/* Description */}
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 {blog.description}
               </p>
 
@@ -67,7 +67,7 @@ const Blogs = ({ blogs }) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
               >
-                <span>Read More</span>
+                <span className='text-xs'>Read More</span>
                 <FaExternalLinkAlt size={16} />
               </a>
 

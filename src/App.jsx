@@ -27,7 +27,7 @@ const App = () => {
     { Component: Experience, props: { experience } },
     { Component: Projects, props: { projects } },
     { Component: Achievements, props: { achievements } },
-    { Component: Education, props: { education } },
+    { Component: Education, props: { education, about } },
     { Component: Blogs, props: { blogs } },
     { Component: Contact, props: { personalInfo } }
   ];

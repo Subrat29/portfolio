@@ -25,13 +25,13 @@ const Projects = ({ projects }) => {
         <div className="space-y-4">
           {/* Title with header line */}
           <div className="flex items-center space-x-3">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            <h3 className="md:text-xl font-bold text-gray-900 dark:text-white">
               {project.title}
             </h3>
             <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
             {project.description}
           </p>
 
@@ -40,7 +40,7 @@ const Projects = ({ projects }) => {
             {project.tech.map((tech, idx) => (
               <span 
                 key={idx} 
-                className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
+                className="px-3 py-1 rounded-full text-xs bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
               >
                 {tech}
               </span>
@@ -60,7 +60,7 @@ const Projects = ({ projects }) => {
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaGithub size={20} />
-              <span className='text-xs'>Source Code</span>
+              <span className='text-xs'>Code</span>
             </a>
             <a
               href={project.live}
@@ -69,7 +69,7 @@ const Projects = ({ projects }) => {
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <FaExternalLinkAlt size={18} />
-              <span className='text-xs'>Live Demo</span>
+              <span className='text-xs'>Live</span>
             </a>
             <a
               href={project.slide}

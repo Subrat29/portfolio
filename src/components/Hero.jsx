@@ -80,12 +80,12 @@ const Hero = ({ personalInfo }) => {
             </div>
 
             <div className="flex gap-4">
-              <SocialLink href={personalInfo.social.github} icon={<FaGithub size={18} />} label="GitHub" />
               <SocialLink href={personalInfo.social.linkedin} icon={<FaLinkedin size={18} />} label="LinkedIn" />
               <SocialLink href={personalInfo.social.twitter} icon={<XIcon />} label="X" />
-              <SocialLink href={personalInfo.social.blog} icon={<FaGlobe size={18} />} label="Blog" />
+              {/* <SocialLink href={personalInfo.social.discord} icon={<FaDiscord />} label="Discord" /> */}
+              <SocialLink href={personalInfo.social.github} icon={<FaGithub size={18} />} label="GitHub" />
               <SocialLink href={personalInfo.social.leetcode} icon={<LeetCodeIcon />} label="LeetCode" />
-              <SocialLink href={personalInfo.social.discord} icon={<FaDiscord />} label="Discord" />
+              <SocialLink href={personalInfo.social.blog} icon={<FaGlobe size={18} />} label="Blog" />
             </div>
           </div>
         </div>

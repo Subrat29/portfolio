@@ -23,7 +23,8 @@ export const portfolioContent = {
             "Full-Stack Development": "Building scalable, secure, and high-performance web applications with seamless integration of frontend and backend technologies.",
             "UI/UX Design and Optimization": "Designing intuitive, visually appealing interfaces and delivering responsive, user-focused experiences that drive engagement.",
             "Innovative Problem-Solving": "Transforming ideas into impactful solutions through teamwork, real-time application development, and open-source contributions, validated by success in competitive hackathons."
-        }
+        },
+        currentLearning: ["TypeScript","Next.js"],
     },
     navigation: [
         { title: 'About', id: 'about' },

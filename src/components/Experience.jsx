@@ -30,25 +30,25 @@ const Experience = ({ experience }) => {
             <div className="pl-8 transition-all duration-300 group-hover:translate-x-2">
               {/* Company and Timeline */}
               <div className="flex items-center space-x-3 mb-4">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="sm:text-xl font-bold text-gray-900 dark:text-white">
                   {exp.company}
                 </h3>
                 <div className="flex-grow h-px bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-400/20 dark:to-purple-400/20"></div>
-                <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                <span className="text-xs md:text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
                   {exp.period}
                 </span>
               </div>
 
               {/* Position */}
               <div className="mb-4">
-                <span className="px-4 py-2 rounded-full text-sm bg-gray-50 dark:bg-gray-800/50 text-blue-600 dark:text-blue-400 border border-gray-200 dark:border-gray-700/50 group-hover:border-blue-500">
+                <span className="px-3 py-1 rounded-full text-xs bg-gray-50 dark:bg-gray-800/50 text-blue-600 dark:text-blue-400 border border-gray-200 dark:border-gray-700/50 group-hover:border-blue-500">
                   {exp.position}
                 </span>
               </div>
 
               {/* Description */}
               <div className="relative">
-                <p className="leading-relaxed text-gray-600 dark:text-gray-400 transition-colors duration-200">
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 transition-colors duration-200">
                   {exp.description}
                 </p>
                 
