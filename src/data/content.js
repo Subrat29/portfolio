@@ -5,12 +5,12 @@ export const portfolioContent = {
         email: "subratyadav29@gmail.com",
         phone: "+91 7820043752",
         location: "Agra, India",
-        image: "/su.jpg",
+        image: "/myImages/p3.jpg",
         resume: "/SubratYadav_CV.pdf",
         social: {
             github: "https://github.com/subrat29",
             linkedin: "https://linkedin.com/in/subratyadav",
-            leetcode: "https://leetcode.com/subratyadav",
+            leetcode: "https://leetcode.com/u/subrat29",
             twitter: "https://x.com/findingsubrat",
             discord: "https://discord.com/subratyadav",
             blog: "https://tech-trendz-seven.vercel.app/",
@@ -24,7 +24,7 @@ export const portfolioContent = {
             "UI/UX Design and Optimization": "Designing intuitive, visually appealing interfaces and delivering responsive, user-focused experiences that drive engagement.",
             "Innovative Problem-Solving": "Transforming ideas into impactful solutions through teamwork, real-time application development, and open-source contributions, validated by success in competitive hackathons."
         },
-        currentLearning: ["TypeScript","Next.js"],
+        currentLearning: ["TypeScript", "Next.js"],
     },
     navigation: [
         { title: 'About', id: 'about' },
@@ -58,6 +58,12 @@ export const portfolioContent = {
 
     experience: [
         {
+            company: "Stealth AI Startup",
+            position: "Full Stack Developer",
+            period: "Jan 2025 - Present",
+            description: "As a Full Stack Developer, I'm building scalable web applications using Next.js and TypeScript for the frontend while developing and optimizing Node.js backend APIs for performance and reliability. I actively contribute to AI-driven projects, crafting innovative solutions, and collaborate with cross-functional teams to deliver impactful results. Key technologies include Next.js, TypeScript, Node.js, and various AI technologies."
+        },
+        {
             company: "Freelancer",
             position: "Full Stack Developer",
             period: "May 2024 - Aug 2024",
@@ -79,34 +85,44 @@ export const portfolioContent = {
 
     projects: [
         {
-            "title": "StartSphere",
+            "title": "Start Sphere",
             "description": "A multi-feature solution for emerging entrepreneurs.",
             "overview": "StartSphere is a platform designed to support startups with features like ML-driven friend suggestions, real-time chat, and sections for posts, networking, and event management. The project improved networking opportunities by 50%, and challenges like real-time communication and scalability were addressed using Socket.io and a modular architecture.",
-            "image": "project/startsphere.png",
-            "tech": ["React.js", "Flowbite", "Tailwind CSS", "Node.js", "Socket.io", "NLP", "Machine Learning"],
+            "image": "project/startsphere2.png",
+            "tech": ["React.js", "Flowbite", "Tailwind CSS", "Node.js", "Socket.io", "NLP", "ML"],
             "github": "https://github.com/Subrat29/StartSphere-Your-Startup-Ecosystem-Integrator",
             "live": "https://startup-topaz.vercel.app/",
-            "slide":"https://docs.google.com/presentation/d/124-wJ0WYIgkYXU4x7LfGitqw9PGSPsGR/edit?usp=sharing&ouid=101022416265119991772&rtpof=true&sd=true"
+            "slide": "https://docs.google.com/presentation/d/124-wJ0WYIgkYXU4x7LfGitqw9PGSPsGR/edit?usp=sharing&ouid=101022416265119991772&rtpof=true&sd=true"
         },
         {
             "title": "Faculty Excellence Tracker",
             "description": "A system for automating career advancement for higher education faculty.",
             "overview": "This project automates faculty appraisals using predefined scoring formulas, ORCID-based profile imports, and real-time dashboards. It integrates with LMS and HR systems to streamline data synchronization and boosts engagement through incentive-based gamification features like badges and leaderboards.",
-            "image": "project/fet.png",
+            "image": "project/fet2.png",
             "tech": ["React.js", "Node.js", "D3.js"],
             "github": "https://github.com/Subrat29/FacultyExcellenceTracker",
             "live": "https://faculty-excellence-tracker.vercel.app/",
             "slide": "https://docs.google.com/presentation/d/1A_NDCD5XQUA9tzaCHK93rHoVGJsADomA/edit?usp=sharing&ouid=101022416265119991772&rtpof=true&sd=true"
         },
         {
-            "title": "TechTrendz",
+            "title": "Tech Trendz",
             "description": "A modern platform for tech blogging.",
             "overview": "TechTrendz allows users to create and manage blogs with features like real-time editing, secure access, and seamless form handling. The platform's load time was reduced by 80% using optimized parsing techniques, enhancing the user experience significantly.",
-            "image": "project/techtrendz.png",
+            "image": "project/techtrendz3.png",
             "tech": ["React.js", "Tailwind CSS", "Shadcn", "Redux", "React Hook Form", "TinyMCE", "Appwrite"],
             "github": "https://github.com/Subrat29/TechTrendz",
             "live": "https://tech-trendz-seven.vercel.app/",
             // "slide":""
+        },
+        {
+            "title": "Social Pulse",
+            "description": "An innovative social media analytics tool that transforms engagement data into actionable insights.",
+            "overview": "Social Pulse is a comprehensive analytics platform that leverages AI to analyze social media engagement data. The platform integrates Langflow for workflow automation and uses GPT models to generate intelligent insights. Built with Astra DB for robust data management, it provides real-time performance metrics analysis to help businesses make data-driven decisions.",
+            "image": "project/social-pulse4.jpeg",
+            "tech": ["Langflow", "OpenAI", "Astra DB", "DataStax", "Python"],
+            "github": "https://github.com/Subrat29/Social-Pulse",  // You'll need to update with the correct GitHub URL
+            "live": "https://socialpulse-seven.vercel.app/",  // Based on the link you provided
+            "demo": "https://www.youtube.com/watch?v=-NDzl1Y_dc4"  // I added a demo field since you have a demo video
         }
     ],
 
@@ -114,7 +130,7 @@ export const portfolioContent = {
         {
             "title": "Winner @YourStory Digital Innovation Hackathon",
             "description": "Led team EndGame25 to secure 1st Place among 1,515 candidates by building a MERN & ML-based startup ecosystem solution.",
-            "images": ["/src/assets/hackathon1.png", "/src/assets/teamwork.png", "/src/assets/award.png"],
+            "images": ["/achievement/yourstory-hackathon/p1.png", "/achievement/yourstory-hackathon/p2.png", "/achievement/yourstory-hackathon/p3.png", "/achievement/yourstory-hackathon/p4.png", "/achievement/yourstory-hackathon/p5.png"],
             "date": "2024"
         },
         {

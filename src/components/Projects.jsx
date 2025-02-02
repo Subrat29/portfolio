@@ -68,7 +68,7 @@ const Projects = ({ projects }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
-              <FaExternalLinkAlt size={18} />
+              <FaExternalLinkAlt size={15} />
               <span className='text-xs'>Live</span>
             </a>
             <a
@@ -77,7 +77,7 @@ const Projects = ({ projects }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
             >
-              <FaExternalLinkAlt size={18} />
+              <FaExternalLinkAlt size={15} />
               <span className='text-xs'>Overview</span>
             </a>
           </div>
