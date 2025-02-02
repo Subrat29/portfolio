@@ -1,6 +1,5 @@
 # Minimal Portfolio Template
-
-A modern, responsive portfolio template built with React, Tailwind CSS, and Vite. Features a dark/light theme, smooth animations, and sections for showcasing skills, experience, projects, achievements, and more.
+A modern open-source, responsive portfolio template built with React, Tailwind CSS, and Vite. Features a dark/light theme, smooth animations, and sections for showcasing skills, experience, projects, achievements, and more.
 
 ## Features
 
