@@ -3,7 +3,7 @@ export const portfolioContent = {
         name: "Subrat Yadav",
         title: "Full Stack Developer | Innovator",
         email: "subratyadav29@gmail.com",
-        phone: "+91 7820043752",
+        phone: "+91 XXXXXXXXXX",
         location: "Agra, India",
         image: "/myImages/p3.jpg",
         resume: "/SubratYadav_CV.pdf",
@@ -142,16 +142,16 @@ export const portfolioContent = {
             "date": "2024"
         },
         {
-            "title": "Finalist @Codex24 Hackathon",
-            "description": "Recognized as a finalist.",
+            "title": "Top 150 Finalist @CodeX-24 Hackathon - PIET Panipat",
+            "description": "Selected among top 150 finalists from 1500+ submissions at CodeX-24, organized by Hackingly at Panipat Institute of Engineering and Technology. Led Team IET AGRA to develop an innovative platform connecting local businesses with customers to combat online marketplace competition.",
             "images": ["/achievement/codex24/p1.jpg", "/achievement/codex24/certificate.jpg", "/achievement/codex24/p2.jpeg"],
-            "date": "2023"
+            "date": "2024",
         },
         {
-            "title": "Finalist @Level SuperMind Hackathon'25",
-            "description": "Recognized as a finalist .",
+            "title": "National Finalist @Level SuperMind Hackathon'25",
+            "description": "Led Team Endgame to national finals with 'Social Pulse' - a social media analytics tool built using Langflow, OpenAI, and Astra DB. Earning recognition from industry leaders like Hitesh Choudhary and Ranveer Allahbadia.",
             "images": ["/achievement/levelsupermind-hackathon25/p1.png", "/achievement/levelsupermind-hackathon25/p2.jpeg"],
-            "date": "2023"
+            "date": "2024"
         },
         {
             "title": "Recognition for outstanding contributions @Hacktoberfest'23",
