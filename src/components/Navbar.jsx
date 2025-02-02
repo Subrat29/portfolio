@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaSun, FaMoon } from 'react-icons/fa';
 
 const Navbar = ({ darkMode, setDarkMode, personalInfo, navigation }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,10 +51,10 @@ const Navbar = ({ darkMode, setDarkMode, personalInfo, navigation }) => {
             {/* Theme Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
               aria-label="Toggle theme"
             >
-              {darkMode ? '☀️' : '🌙'}
+              {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
             </button>
 
             {/* Resume Button */}
@@ -72,10 +72,10 @@ const Navbar = ({ darkMode, setDarkMode, personalInfo, navigation }) => {
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
               aria-label="Toggle theme"
             >
-              {darkMode ? '☀️' : '🌙'}
+              {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
             </button>
 
             <a

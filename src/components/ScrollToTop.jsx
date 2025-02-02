@@ -23,15 +23,25 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 p-2 rounded-full bg-indigo-500 text-white shadow-md transition-opacity duration-300 ease-in-out ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className={`fixed bottom-8 right-8 p-3 rounded-full 
+        bg-gray-100 dark:bg-gray-800 
+        text-gray-600 dark:text-gray-300 
+        hover:bg-gray-200 dark:hover:bg-gray-700
+        shadow-lg hover:shadow-xl
+        border border-gray-200 dark:border-gray-700
+        transition-all duration-300 ease-in-out
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+        group
+      `}
       style={{
-        zIndex: 9999, // Ensure the button is above other elements
+        zIndex: 9999,
       }}
       aria-label="Scroll to top"
     >
-      <FaChevronUp size={20} />
+      <FaChevronUp 
+        size={20} 
+        className="transform group-hover:-translate-y-1 transition-transform duration-300"
+      />
     </button>
   );
 };

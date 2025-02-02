@@ -122,9 +122,9 @@ export const portfolioContent = {
             "overview": "Social Pulse is a comprehensive analytics platform that leverages AI to analyze social media engagement data. The platform integrates Langflow for workflow automation and uses GPT models to generate intelligent insights. Built with Astra DB for robust data management, it provides real-time performance metrics analysis to help businesses make data-driven decisions.",
             "image": "project/social-pulse4.jpeg",
             "tech": ["Langflow", "OpenAI", "Astra DB", "DataStax", "Python"],
-            "github": "https://github.com/Subrat29/Social-Pulse",  // You'll need to update with the correct GitHub URL
-            "live": "https://socialpulse-seven.vercel.app/",  // Based on the link you provided
-            "demo": "https://www.youtube.com/watch?v=-NDzl1Y_dc4"  // I added a demo field since you have a demo video
+            "github": "https://github.com/Subrat29/Social-Pulse",
+            "live": "https://socialpulse-seven.vercel.app/",  
+            "slide": "https://www.youtube.com/watch?v=-NDzl1Y_dc4"  
         }
     ],
 
