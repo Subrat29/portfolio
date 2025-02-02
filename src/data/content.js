@@ -16,6 +16,7 @@ export const portfolioContent = {
             blog: "https://tech-trendz-seven.vercel.app/",
         },
     },
+
     about: {
         title: "Full Stack Developer | Innovator | Problem Solver",
         description: "I am a passionate full stack developer from Agra, India, with a track record of delivering innovative, real-world solutions through high-performance web applications.",
@@ -26,6 +27,7 @@ export const portfolioContent = {
         },
         currentLearning: ["TypeScript", "Next.js"],
     },
+
     navigation: [
         { title: 'About', id: 'about' },
         { title: 'Skills', id: 'skills' },
@@ -148,7 +150,7 @@ export const portfolioContent = {
         {
             "title": "Finalist @Level SuperMind Hackathon'25",
             "description": "Recognized as a finalist .",
-            "images": ["/achievement/levelsupermind-hackathon25/p1.png","/achievement/levelsupermind-hackathon25/p2.jpeg"],
+            "images": ["/achievement/levelsupermind-hackathon25/p1.png", "/achievement/levelsupermind-hackathon25/p2.jpeg"],
             "date": "2023"
         },
         {
@@ -177,19 +179,18 @@ export const portfolioContent = {
 
     blogs: [
         {
-            title: "Coming Soon",
-            description: "Technical blogs and articles about web development and software engineering.",
-            link: "#"
+            title: "Access Token and Refresh Token",
+            description: "In today’s world, many apps and websites use access tokens and refresh tokens to keep users securely logged in without needing them to enter their password repeatedly...",
+            image: "/blog/p1.png",
+            url: "https://tech-trendz-seven.vercel.app/post/access-token-and-refresh-token",
+            tags: ["Referesh Token", "Access Token", "Security"]
         },
         {
-            title: "Coming Soon",
-            description: "Technical blogs and articles about web development and software engineering.",
-            link: "#"
-        },
-        {
-            title: "Coming Soon",
-            description: "Technical blogs and articles about web development and software engineering.",
-            link: "#"
+            title: "Writing Clean JavaScript",
+            description: "JavaScript is one of the most popular programming languages in web development, known for its flexibility and wide application across browsers and servers...",
+            image: "/blog/p2.png",
+            url: "https://tech-trendz-seven.vercel.app/post/writing-clean-javascript",
+            tags: ["JavaScript", "Clean Code", "Best Practices"]
         }
     ]
 };

@@ -7,6 +7,18 @@ const Blogs = ({ blogs }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleBlogs = showAll ? blogs : blogs.slice(0, 2);
 
+  const handleClick = (url, e) => {
+    if (!url) {
+      e.preventDefault();
+      console.warn('Blog URL is missing');
+      return;
+    }
+    
+    // Ensure URL has proper protocol
+    const formattedUrl = url.startsWith('http') ? url : `https://${url}`;
+    window.open(formattedUrl, '_blank', 'noopener noreferrer');
+  };
+
   return (
     <section className="relative py-24 max-w-6xl mx-auto px-4" id="blogs">
       {/* Section Title */}
@@ -61,15 +73,13 @@ const Blogs = ({ blogs }) => {
               </p>
 
               {/* Read More Link */}
-              <a
-                href={blog.live}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={(e) => handleClick(blog.url || blog.live, e)}
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:translate-y-[-2px]"
               >
-                <span className='text-xs'>Read More</span>
-                <FaExternalLinkAlt size={16} />
-              </a>
+                <span className="text-xs">Read More</span>
+                <FaExternalLinkAlt size={15} />
+              </button>
 
               {/* Bottom gradient line that appears on hover */}
               <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"></div>
