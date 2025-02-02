@@ -130,37 +130,37 @@ export const portfolioContent = {
         {
             "title": "Winner @YourStory Digital Innovation Hackathon",
             "description": "Led team EndGame25 to secure 1st Place among 1,515 candidates by building a MERN & ML-based startup ecosystem solution.",
-            "images": ["/achievement/yourstory-hackathon/p1.png", "/achievement/yourstory-hackathon/p2.png", "/achievement/yourstory-hackathon/p3.png", "/achievement/yourstory-hackathon/p4.png", "/achievement/yourstory-hackathon/p5.png"],
+            "images": ["/achievement/yourstory-hackathon/p1.png", "/achievement/yourstory-hackathon/p2.png", "/achievement/yourstory-hackathon/p3.png"],
             "date": "2024"
         },
         {
             "title": "Runner-Up @Smart India Hackathon 2024",
             "description": "Navigated the team to emerge as top 6 finalists and secure the runner-up position among 150 teams by addressing a designated problem statement.",
-            "images": ["/src/assets/sih2024.png", "/src/assets/team.png", "/src/assets/presentation.png"],
+            "images": ["/achievement/sih24/p1.jpg", "/achievement/sih24/certificate.jpg", "/achievement/sih24/p2.jpg", "/achievement/sih24/p3.JPG", "/achievement/sih24/p4.JPG"],
             "date": "2024"
         },
         {
             "title": "Finalist @Codex24 Hackathon",
             "description": "Recognized as a finalist.",
-            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "images": ["/achievement/codex24/p1.jpg", "/achievement/codex24/certificate.jpg", "/achievement/codex24/p2.jpeg"],
             "date": "2023"
         },
         {
             "title": "Finalist @Level SuperMind Hackathon'25",
             "description": "Recognized as a finalist .",
-            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "images": ["/achievement/levelsupermind-hackathon25/p1.png","/achievement/levelsupermind-hackathon25/p2.jpeg"],
             "date": "2023"
         },
         {
             "title": "Recognition for outstanding contributions @Hacktoberfest'23",
             "description": "Awarded a Certificate of Recognition for outstanding contributions to the hackathon during Hacktoberfest'23",
-            "images": ["/src/assets/codex24.png", "/src/assets/contributor.png", "/src/assets/certificate.png"],
+            "images": ["achievement/hacktoberfest23/p1.webp", "achievement/hacktoberfest23/p2.png"],
             "date": "2023"
         },
         {
             "title": "Solved 400+ DSA Challenges",
             "description": "Excelled in solving 400+ data structure and algorithm challenges on platforms like LeetCode and GeeksforGeeks, specializing in programming, graphs, and data manipulation.",
-            "images": ["/src/assets/dsa.png", "/src/assets/leetcode.png", "/src/assets/graphs.png"],
+            "images": ["achievement/dsa_challenges/p1.jpg", "achievement/dsa_challenges/p2.png"],
             "date": "2023"
         }
     ],
