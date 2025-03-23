@@ -62,7 +62,7 @@ export const portfolioContent = {
         {
             company: "Stealth AI Startup",
             position: "Full Stack Developer",
-            period: "Jan 2025 - Present",
+            period: "Sep 2024 - Feb 2025",
             description: "As a Full Stack Developer, I'm building scalable web applications using Next.js and TypeScript for the frontend while developing and optimizing Node.js backend APIs for performance and reliability. I actively contribute to AI-driven projects, crafting innovative solutions, and collaborate with cross-functional teams to deliver impactful results. Key technologies include Next.js, TypeScript, Node.js, and various AI technologies."
         },
         {
