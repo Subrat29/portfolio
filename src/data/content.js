@@ -62,32 +62,32 @@ export const portfolioContent = {
         {
             company: "CirclePe",
             position: "Full Stack Developer",
-            period: "March 2025 – Present",
+            period: "March 2025 – Present | Gurugram, India (Onsite)",
             location: "Gurugram (onsite)",
             description: "As a Full Stack Developer at CirclePe, I contributed to building scalable fintech infrastructure from the ground up, including real-time loan onboarding, API integrations, and compliance-focused systems to improve reliability and user trust. Collaborating with a 6-member pre-seed team, I helped design and implement Figma-based dashboards, CRM/LOS tools, and rule engines to optimize workflows and operations. Additionally, I enhanced frontend performance and modularity by developing reusable React.js components and hooks."
         },
         {
             company: "Stealth AI Startup",
             position: "Full Stack Developer",
-            period: "Sep 2024 - Feb 2025",
+            period: "Sep 2024 - Feb 2025 | California, USA (Remote)",
             description: "As a Full Stack Developer, I'm building scalable web applications using Next.js and TypeScript for the frontend while developing and optimizing Node.js backend APIs for performance and reliability. I actively contribute to AI-driven projects, crafting innovative solutions, and collaborate with cross-functional teams to deliver impactful results. Key technologies include Next.js, TypeScript, Node.js, and various AI technologies."
         },
         {
             company: "Freelancer",
             position: "Full Stack Developer",
-            period: "May 2024 - Aug 2024",
+            period: "May 2024 - Aug 2024 | Remote",
             description: "As a Full Stack Developer, I designed and developed a comprehensive school management application leveraging React.js, Node.js, and MongoDB to streamline student operations for over 500 students. I enhanced the user experience with Tailwind CSS and Shadcn, resulting in a 30% increase in engagement. Additionally, I implemented real-time updates using WebSockets to improve user interaction by 25% and ensured secure access by integrating role-based authentication, reducing unauthorized access by 40%."
         },
         {
             company: "Hacktoberfest 2023",
             position: "Open-Source Contributor",
-            period: "October 2023",
+            period: "October 2023 | Remote",
             description: "During Hacktoberfest 2023, I actively contributed to open-source projects by engineering innovative components that enhanced code quality and usability. I resolved over 20 critical bugs, significantly improving project stability and functionality. By achieving cross-browser compatibility, I delivered a seamless and consistent user experience, boosting satisfaction for a diverse user base."
         },
         {
             company: "GirlScript Summer of Code 2023",
             position: "Open-Source Contributor",
-            period: "May 2023 - July 2023",
+            period: "May 2023 - July 2023 | Remote",
             description: "At GirlScript Summer of Code 2023, I played a key role in developing impactful features and components for various open-source projects. My contributions included optimizing workflows and refactoring code to enhance performance and scalability. Additionally, I focused on improving interface consistency across platforms, delivering a polished and user-friendly experience."
         }
     ],
