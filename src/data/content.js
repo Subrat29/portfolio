@@ -60,6 +60,13 @@ export const portfolioContent = {
 
     experience: [
         {
+            company: "CirclePe",
+            position: "Full Stack Developer",
+            period: "March 2025 – Present",
+            location: "Gurugram (onsite)",
+            description: "As a Full Stack Developer at CirclePe, I contributed to building scalable fintech infrastructure from the ground up, including real-time loan onboarding, API integrations, and compliance-focused systems to improve reliability and user trust. Collaborating with a 6-member pre-seed team, I helped design and implement Figma-based dashboards, CRM/LOS tools, and rule engines to optimize workflows and operations. Additionally, I enhanced frontend performance and modularity by developing reusable React.js components and hooks."
+        },
+        {
             company: "Stealth AI Startup",
             position: "Full Stack Developer",
             period: "Sep 2024 - Feb 2025",
