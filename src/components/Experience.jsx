@@ -51,7 +51,19 @@ const Experience = ({ experience }) => {
                 <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 transition-colors duration-200">
                   {exp.description}
                 </p>
-                
+
+                {/* Highlights bullets */}
+                {exp.highlights && exp.highlights.length > 0 && (
+                  <ul className="mt-3 space-y-2">
+                    {exp.highlights.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 {/* Hover effect line */}
                 <div className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"></div>
               </div>
