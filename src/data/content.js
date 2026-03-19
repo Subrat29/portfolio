@@ -1,10 +1,10 @@
 export const portfolioContent = {
     personalInfo: {
         name: "Subrat Yadav",
-        title: "Full Stack Developer | Innovator",
+        title: "Full Stack + AI Engineer | Fintech | Open to Remote",
         email: "subratyadav29@gmail.com",
-        phone: "+91 XXXXXXXXXX",
-        location: "Agra, India",
+        phone: "+91 7820043752",
+        location: "Gurugram, India",
         image: "/myImages/p3.jpg",
         resume: "/SubratYadav_CV.pdf",
         social: {
@@ -18,14 +18,14 @@ export const portfolioContent = {
     },
 
     about: {
-        title: "Full Stack Developer | Innovator | Problem Solver",
-        description: "I am a passionate full stack developer from Agra, India, with a track record of delivering innovative, real-world solutions through high-performance web applications.",
+        title: "Full Stack + AI Engineer | Fintech Systems | LLM & Chatbot Builder",
+        description: "Full Stack & AI Engineer with 1+ year of experience building production-grade fintech and AI systems from scratch as part of the founding team at CirclePe. I own end-to-end engineering — from a 35-module NestJS backend (LOS, CRM, BRE, eKYC) to an AI-powered WhatsApp chatbot that automates tenant journeys using AWS Bedrock, RAG pipelines, and real-time workflow orchestration.",
         offer: {
-            "Full-Stack Development": "Building scalable, secure, and high-performance web applications with seamless integration of frontend and backend technologies.",
-            "UI/UX Design and Optimization": "Designing intuitive, visually appealing interfaces and delivering responsive, user-focused experiences that drive engagement.",
-            "Innovative Problem-Solving": "Transforming ideas into impactful solutions through teamwork, real-time application development, and open-source contributions, validated by success in competitive hackathons."
+            "Fintech Infrastructure": "Building Loan Origination Systems, credit underwriting engines, eKYC/eSign workflows, and multi-lender BRE from scratch — compliant, scalable, and production-ready.",
+            "AI & LLM Engineering": "Designing multi-turn chatbots, RAG pipelines on vector databases, LLM function calling, and production observability with Langfuse on AWS Bedrock (Claude 3.5).",
+            "Full-Stack Systems": "End-to-end product engineering — NestJS backends, React dashboards, async BullMQ pipelines, real-time Socket.io, and serverless AWS Lambda plugins."
         },
-        currentLearning: ["TypeScript", "Next.js"],
+        currentLearning: ["AI Agents", "AWS Architecture"],
     },
 
     navigation: [
@@ -41,54 +41,63 @@ export const portfolioContent = {
 
     skills: [
         {
+            category: "Languages",
+            items: ["JavaScript", "TypeScript", "C++", "SQL"]
+        },
+        {
             category: "Frontend",
-            items: ["React.js", "Redux", "Tailwind CSS", "Shadcn", "HTML5/CSS3"]
+            items: ["React.js", "Next.js", "Redux", "Zustand", "TailwindCSS", "Radix UI", "ShadCN", "TanStack Query", "Zod", "React Hook Form", "Framer Motion", "XYFlow"]
         },
         {
             category: "Backend",
-            items: ["Node.js", "Express.js", "RESTful APIs", "WebSocket"]
+            items: ["NestJS", "Node.js", "Express.js", "REST APIs", "BullMQ", "Socket.io", "Prisma"]
         },
         {
-            category: "Database & Cloud",
-            items: ["MongoDB", "Appwrite"]
+            category: "AI / ML",
+            items: ["AWS Bedrock (Claude 3.5)", "OpenAI", "LLM Function Calling", "RAG", "MongoDB Vector Search", "Langfuse", "Prompt Engineering"]
         },
         {
-            category: "Languages & Tools",
-            items: ["JavaScript (ES6+)", "C++", "Java", "Git", "GitHub", "VS Code", "Postman"]
+            category: "Databases",
+            items: ["MongoDB", "PostgreSQL", "Redis", "MySQL"]
+        },
+        {
+            category: "Cloud & Infra",
+            items: ["AWS S3", "AWS Lambda", "AWS KMS", "AWS SES/SNS", "AWS Bedrock", "AWS SAM", "Azure", "Docker"]
+        },
+        {
+            category: "Tools",
+            items: ["Git", "GitHub", "Postman", "Figma", "Sentry", "New Relic"]
         }
     ],
 
     experience: [
         {
             company: "CirclePe",
-            position: "Full Stack Developer",
-            period: "March 2025 – Present | Gurugram, India (Onsite)",
-            location: "Gurugram (onsite)",
-            description: "As a Full Stack Developer at CirclePe, I contributed to building scalable fintech infrastructure from the ground up, including real-time loan onboarding, API integrations, and compliance-focused systems to improve reliability and user trust. Collaborating with a 6-member pre-seed team, I helped design and implement Figma-based dashboards, CRM/LOS tools, and rule engines to optimize workflows and operations. Additionally, I enhanced frontend performance and modularity by developing reusable React.js components and hooks."
+            position: "Software Engineer / Founding Team",
+            period: "March 2025 – Present | Gurugram, India",
+            location: "Gurugram, India",
+            description: "CirclePe eliminates security deposits from India's rental market. As an early engineer on the founding team, I own both the core fintech infrastructure and the AI product (Coco).",
+            highlights: [
+                "Architected end-to-end Loan Origination System (LOS) using NestJS (35+ modules) — real-time credit underwriting, CIBIL/Experian/Equifax integrations, eKYC (Digio, Digitap), e-sign, eMandate, and Cashfree payments.",
+                "Built Business Rules Engine (json-rules-engine) for dynamic multi-lender credit approval and engineered BullMQ + Redis async pipeline for email, eMandate, and lead transfers.",
+                "Developed CRM, LOS & B2B operator dashboards (React 18 + TanStack + Radix UI) with real-time Socket.io updates and role-based access control.",
+                "Built Coco — AI-powered WhatsApp chatbot automating tenant rental journey using AWS Bedrock (Claude 3.5 Sonnet), RAG on MongoDB Vector Search, multi-turn conversation state, and Langfuse LLM observability.",
+                "Designed serverless plugin architecture (AWS Lambda + SAM) for credit underwriting and document generation; built visual workflow designer (Next.js 16 + XYFlow)."
+            ]
         },
         {
-            company: "Stealth AI Startup",
-            position: "Full Stack Developer",
-            period: "Sep 2024 - Feb 2025 | California, USA (Remote)",
-            description: "As a Full Stack Developer, I'm building scalable web applications using Next.js and TypeScript for the frontend while developing and optimizing Node.js backend APIs for performance and reliability. I actively contribute to AI-driven projects, crafting innovative solutions, and collaborate with cross-functional teams to deliver impactful results. Key technologies include Next.js, TypeScript, Node.js, and various AI technologies."
+            company: "KiwiQ AI",
+            position: "Full Stack Developer Intern",
+            period: "Sep 2024 – Feb 2025 | California, USA (Remote)",
+            description: "Built responsive frontend interfaces with React.js/ShadCN and optimized Node.js backend APIs, contributing to AI-driven product features and platform performance.",
+            highlights: []
         },
         {
-            company: "Freelancer",
-            position: "Full Stack Developer",
-            period: "May 2024 - Aug 2024 | Remote",
-            description: "As a Full Stack Developer, I designed and developed a comprehensive school management application leveraging React.js, Node.js, and MongoDB to streamline student operations for over 500 students. I enhanced the user experience with Tailwind CSS and Shadcn, resulting in a 30% increase in engagement. Additionally, I implemented real-time updates using WebSockets to improve user interaction by 25% and ensured secure access by integrating role-based authentication, reducing unauthorized access by 40%."
-        },
-        {
-            company: "Hacktoberfest 2023",
+            company: "Hacktoberfest 2023 & GSSoC 2023",
             position: "Open-Source Contributor",
-            period: "October 2023 | Remote",
-            description: "During Hacktoberfest 2023, I actively contributed to open-source projects by engineering innovative components that enhanced code quality and usability. I resolved over 20 critical bugs, significantly improving project stability and functionality. By achieving cross-browser compatibility, I delivered a seamless and consistent user experience, boosting satisfaction for a diverse user base."
-        },
-        {
-            company: "GirlScript Summer of Code 2023",
-            position: "Open-Source Contributor",
-            period: "May 2023 - July 2023 | Remote",
-            description: "At GirlScript Summer of Code 2023, I played a key role in developing impactful features and components for various open-source projects. My contributions included optimizing workflows and refactoring code to enhance performance and scalability. Additionally, I focused on improving interface consistency across platforms, delivering a polished and user-friendly experience."
+            period: "May 2023 – Oct 2023 | Remote",
+            description: "Contributed to multiple open-source repositories — developed new components, resolved critical bugs, and improved code quality across Hacktoberfest'23 and GirlScript Summer of Code'23.",
+            highlights: []
         }
     ],
 
@@ -167,8 +176,8 @@ export const portfolioContent = {
             "date": "2023"
         },
         {
-            "title": "Solved 400+ DSA Challenges",
-            "description": "Excelled in solving 400+ data structure and algorithm challenges on platforms like LeetCode and GeeksforGeeks, specializing in programming, graphs, and data manipulation.",
+            "title": "Solved 500+ DSA Challenges",
+            "description": "Solved 500+ data structure and algorithm challenges on LeetCode and GeeksforGeeks, specializing in graphs, dynamic programming, and data manipulation.",
             "images": ["achievement/dsa_challenges/p1.jpg", "achievement/dsa_challenges/p2.png"],
             "date": "2023"
         }
